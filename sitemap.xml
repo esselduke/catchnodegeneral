@@ -55,6 +55,36 @@
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://catchnode.com/cases/saas-startup-soc2-compliance.html</loc>
+        <lastmod>2024-10-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://catchnode.com/cases/ecommerce-invoice-automation.html</loc>
+        <lastmod>2024-10-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://catchnode.com/cases/manufacturing-helpdesk-support.html</loc>
+        <lastmod>2024-10-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://catchnode.com/cases/cloud-migration-weekend.html</loc>
+        <lastmod>2024-10-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://catchnode.com/cases/consulting-document-automation.html</loc>
+        <lastmod>2024-10-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
     
     <!-- About -->
     <url>
