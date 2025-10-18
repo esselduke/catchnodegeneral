@@ -1536,6 +1536,95 @@ codeBlocks.forEach(codeBlock => {
     });
 });
 
+
+/* ====================================
+   404 ERROR PAGE - GO BACK FUNCTIONALITY
+   ==================================== */
+
+// Go Back button functionality
+function init404Page() {
+    const goBackBtn = document.getElementById('goBackBtn');
+    
+    if (goBackBtn) {
+        goBackBtn.addEventListener('click', () => {
+            // Check if there's history to go back to
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // If no history, go to homepage
+                window.location.href = '/';
+            }
+        });
+    }
+    
+    // Optional: Search form functionality
+    const searchForm = document.querySelector('.error-search-form');
+    
+    if (searchForm) {
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const searchInput = searchForm.querySelector('.error-search-form__input');
+            const searchQuery = searchInput.value.trim();
+            
+            if (searchQuery) {
+                // Redirect to search results (implement your search page URL)
+                // For now, we'll use Google site search as an example
+                window.location.href = `https://www.google.com/search?q=site:catchnode.com ${encodeURIComponent(searchQuery)}`;
+                
+                // Alternative: Redirect to your own search page
+                // window.location.href = `/search.html?q=${encodeURIComponent(searchQuery)}`;
+            }
+        });
+    }
+}
+
+// Initialize 404 page functionality
+init404Page();
+
+// Apply reveal animations to 404 page elements
+const errorPageIcon = document.querySelector('.error-page__icon');
+if (errorPageIcon && typeof observer !== 'undefined') {
+    errorPageIcon.classList.add('reveal');
+    observer.observe(errorPageIcon);
+}
+
+const errorPageCode = document.querySelector('.error-page__code');
+if (errorPageCode && typeof observer !== 'undefined') {
+    errorPageCode.classList.add('reveal');
+    errorPageCode.style.transitionDelay = '0.1s';
+    observer.observe(errorPageCode);
+}
+
+const errorPageTitle = document.querySelector('.error-page__title');
+if (errorPageTitle && typeof observer !== 'undefined') {
+    errorPageTitle.classList.add('reveal');
+    errorPageTitle.style.transitionDelay = '0.2s';
+    observer.observe(errorPageTitle);
+}
+
+const errorPageMessage = document.querySelector('.error-page__message');
+if (errorPageMessage && typeof observer !== 'undefined') {
+    errorPageMessage.classList.add('reveal');
+    errorPageMessage.style.transitionDelay = '0.3s';
+    observer.observe(errorPageMessage);
+}
+
+const errorPageActions = document.querySelector('.error-page__actions');
+if (errorPageActions && typeof observer !== 'undefined') {
+    errorPageActions.classList.add('reveal');
+    errorPageActions.style.transitionDelay = '0.4s';
+    observer.observe(errorPageActions);
+}
+
+const errorLinks = document.querySelectorAll('.error-link');
+errorLinks.forEach((link, index) => {
+    link.classList.add('reveal');
+    link.style.transitionDelay = `${0.1 + (index * 0.1)}s`;
+    if (typeof observer !== 'undefined') {
+        observer.observe(link);
+    }
+});
+
 })();
 
 

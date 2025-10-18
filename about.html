@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Catchnode team. We're a dedicated group of IT professionals, automation specialists, and security experts committed to helping businesses operate more efficiently.">
+    <meta name="keywords" content="about us, company info, IT team, automation experts, cybersecurity professionals">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Us – Catchnode">
+    <meta property="og:description" content="Learn about our mission, approach, and the team behind Catchnode's IT services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://catchnode.com/about.html">
+    <meta property="og:image" content="https://catchnode.com/assets/og-about.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us – Catchnode">
+    <meta name="twitter:description" content="Meet the team behind Catchnode's IT automation and security services.">
+    <meta name="twitter:image" content="https://catchnode.com/assets/twitter-about.jpg">
+    
+    <title>About Us – Our Mission & Team | Catchnode</title>
+    
+    <!-- Preload Critical Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="/" class="header__logo" aria-label="Catchnode Home">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="32" height="32" rx="6" fill="#2F6BFF"/>
+                    <path d="M16 8L8 14V24H12V18H20V24H24V14L16 8Z" fill="white"/>
+                </svg>
+                <span class="header__logo-text">Catchnode</span>
+            </a>
+            
+            <nav class="header__nav" id="mainNav" aria-label="Main Navigation">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item header__nav-item--dropdown">
+                        <button class="header__nav-link header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            Services
+                            <svg class="header__dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="currentColor" aria-hidden="true">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <ul class="header__dropdown">
+                            <li><a href="/services/index.html" class="header__dropdown-link">All Services</a></li>
+                            <li><a href="/services/helpdesk.html" class="header__dropdown-link">IT & Automation Helpdesk</a></li>
+                            <li><a href="/services/automation.html" class="header__dropdown-link">Automation & Efficiency</a></li>
+                            <li><a href="/services/cloud.html" class="header__dropdown-link">Cloud & Cybersecurity</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/pricing.html" class="header__nav-link">Pricing</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/cases/index.html" class="header__nav-link">Case Studies</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/about.html" class="header__nav-link">About</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/blog/index.html" class="header__nav-link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a href="/contact.html" class="header__cta btn btn--primary">Contact Us</a>
+            
+            <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <nav class="mobile-menu__nav" aria-label="Mobile Navigation">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a href="/services/index.html" class="mobile-menu__link">All Services</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/services/helpdesk.html" class="mobile-menu__link">IT & Automation Helpdesk</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/services/automation.html" class="mobile-menu__link">Automation & Efficiency</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/services/cloud.html" class="mobile-menu__link">Cloud & Cybersecurity</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/pricing.html" class="mobile-menu__link">Pricing</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/cases/index.html" class="mobile-menu__link">Case Studies</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/about.html" class="mobile-menu__link">About</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/blog/index.html" class="mobile-menu__link">Blog</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/contact.html" class="btn btn--primary mobile-menu__cta">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- About Hero -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero__content">
+                    <h1 class="about-hero__title">We help businesses move faster and work smarter</h1>
+                    <p class="about-hero__subtitle">Catchnode was founded on a simple belief: technology should empower people, not frustrate them. We're a team of IT professionals, automation specialists, and security experts dedicated to making business technology actually work.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mission & Approach -->
+        <section class="about-mission section">
+            <div class="container">
+                <div class="about-mission__grid">
+                    <div class="about-mission__card">
+                        <h2 class="about-mission__title">Our Mission</h2>
+                        <p class="about-mission__text">To eliminate the friction between businesses and their technology. We believe every company—regardless of size—deserves reliable IT support, intelligent automation, and robust security without the complexity or cost of building an internal IT department.</p>
+                    </div>
+                    
+                    <div class="about-mission__card">
+                        <h2 class="about-mission__title">Our Approach</h2>
+                        <p class="about-mission__text">We're outcome-driven, not ticket-driven. Instead of just fixing problems as they arise, we proactively identify opportunities to automate, secure, and optimize. Every engagement starts with understanding your business goals, not just your technical requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Values -->
+        <section class="about-values section section--alt">
+            <div class="container">
+                <header class="section__header section__header--centered">
+                    <h2 class="section__title">Our Values</h2>
+                    <p class="section__subtitle">The principles that guide every client engagement and internal decision.</p>
+                </header>
+                
+                <div class="values-grid">
+                    <article class="value-card">
+                        <div class="value-card__icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="24" cy="24" r="20" fill="#EEF4FF"/>
+                                <path d="M24 12L18 18H21V28H27V18H30L24 12ZM16 30V32H32V30H16Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="value-card__title">Clarity Over Complexity</h3>
+                        <p class="value-card__description">We explain technical concepts in plain language. No jargon, no gatekeeping. If we can't explain it simply, we don't understand it well enough.</p>
+                    </article>
+                    
+                    <article class="value-card">
+                        <div class="value-card__icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="24" cy="24" r="20" fill="#EEF4FF"/>
+                                <path d="M24 12C17.4 12 12 17.4 12 24C12 30.6 17.4 36 24 36C30.6 36 36 30.6 36 24C36 17.4 30.6 12 24 12ZM24 18C25.7 18 27 19.3 27 21C27 22.7 25.7 24 24 24C22.3 24 21 22.7 21 21C21 19.3 22.3 18 24 18ZM24 33C21 33 18.4 31.4 17.1 29C17.1 27 21 26 24 26C27 26 30.9 27 30.9 29C29.6 31.4 27 33 24 33Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="value-card__title">Client Success First</h3>
+                        <p class="value-card__description">We succeed when our clients succeed. Every recommendation is made with the client's best interest in mind, even if it means less revenue for us.</p>
+                    </article>
+                    
+                    <article class="value-card">
+                        <div class="value-card__icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="24" cy="24" r="20" fill="#EEF4FF"/>
+                                <path d="M28 14H20L16 18V30H32V18L28 14ZM30 28H18V19.5L20.5 17H27.5L30 19.5V28ZM22 20H26V22H22V20ZM22 23H26V25H22V23ZM22 26H24V28H22V26Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="value-card__title">Proactive Problem-Solving</h3>
+                        <p class="value-card__description">We don't wait for things to break. We monitor, anticipate, and fix issues before they impact your business. Prevention beats reaction every time.</p>
+                    </article>
+                    
+                    <article class="value-card">
+                        <div class="value-card__icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="24" cy="24" r="20" fill="#EEF4FF"/>
+                                <path d="M16 14H32V18H16V14ZM20 22H28V26H20V22ZM16 30H32V34H16V30Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="value-card__title">Continuous Improvement</h3>
+                        <p class="value-card__description">Technology evolves, and so do we. We're constantly learning new tools, techniques, and best practices to deliver better results for our clients.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Timeline / Journey -->
+        <section class="about-timeline section">
+            <div class="container">
+                <header class="section__header section__header--centered">
+                    <h2 class="section__title">Our Journey</h2>
+                </header>
+                
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-item__marker"></div>
+                        <div class="timeline-item__content">
+                            <div class="timeline-item__year">2019</div>
+                            <h3 class="timeline-item__title">Founded</h3>
+                            <p class="timeline-item__description">Catchnode was founded by a team of IT professionals frustrated with the traditional managed services model. We saw too many companies paying for reactive support when they needed proactive partnership.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="timeline-item">
+                        <div class="timeline-item__marker"></div>
+                        <div class="timeline-item__content">
+                            <div class="timeline-item__year">2020</div>
+                            <h3 class="timeline-item__title">First 50 Clients</h3>
+                            <p class="timeline-item__description">During the remote work transition, we helped 50 businesses rapidly deploy cloud infrastructure, implement security protocols, and maintain business continuity without skipping a beat.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="timeline-item">
+                        <div class="timeline-item__marker"></div>
+                        <div class="timeline-item__content">
+                            <div class="timeline-item__year">2022</div>
+                            <h3 class="timeline-item__title">Automation Focus</h3>
+                            <p class="timeline-item__description">We expanded our automation practice after seeing the massive impact of even simple workflow automations. Clients were saving 20-40 hours per month, and we knew we could do more.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="timeline-item">
+                        <div class="timeline-item__marker"></div>
+                        <div class="timeline-item__content">
+                            <div class="timeline-item__year">2024</div>
+                            <h3 class="timeline-item__title">200+ Clients & Growing</h3>
+                            <p class="timeline-item__description">Today, we support over 200 businesses ranging from startups to established enterprises. We've automated thousands of hours of manual work and secured millions of sensitive records.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Leadership -->
+        <section class="about-leadership section section--alt">
+            <div class="container">
+                <header class="section__header section__header--centered">
+                    <h2 class="section__title">Leadership Team</h2>
+                </header>
+                
+                <div class="leadership-grid">
+                    <article class="leader-card">
+                        <div class="leader-card__image">
+                            <img src="/assets/team-ceo.jpg" alt="David Martinez, CEO" width="280" height="280" loading="lazy">
+                        </div>
+                        <div class="leader-card__content">
+                            <h3 class="leader-card__name">David Martinez</h3>
+                            <p class="leader-card__title">CEO & Co-Founder</p>
+                            <p class="leader-card__bio">15+ years in enterprise IT and managed services. Previously led IT operations for a Fortune 500 company before founding Catchnode to bring enterprise-grade IT to growing businesses.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="leader-card">
+                        <div class="leader-card__image">
+                            <img src="/assets/team-cto.jpg" alt="Sarah Chen, CTO" width="280" height="280" loading="lazy">
+                        </div>
+                        <div class="leader-card__content">
+                            <h3 class="leader-card__name">Sarah Chen</h3>
+                            <p class="leader-card__title">CTO & Co-Founder</p>
+                            <p class="leader-card__bio">Automation architect and security specialist with background in fintech and healthcare IT. Leads our automation practice and ensures every solution is secure, scalable, and maintainable.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-strip">
+            <div class="container">
+                <div class="cta-strip__content">
+                    <h2 class="cta-strip__title">Work with a team that cares about your success</h2>
+                    <p class="cta-strip__subtitle">Let's discuss how Catchnode can help your business operate more efficiently, securely, and confidently. Schedule a consultation to learn more about our approach.</p>
+                </div>
+                <div class="cta-strip__actions">
+                    <a href="/contact.html" class="btn btn--primary btn--large">Get in Touch</a>
+                    <a href="/services/index.html" class="btn btn--secondary btn--large">Explore Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="container">
+                <div class="footer__grid">
+                    <!-- Company Info -->
+                    <div class="footer__column footer__column--brand">
+                        <a href="/" class="footer__logo" aria-label="Catchnode Home">
+                            <img src="/assets/logo.png" width="40%" alt="">
+                        </a>
+                        <p class="footer__tagline">Automate. Secure. Simplify.</p>
+                        <p class="footer__description">Operational IT, intelligent automation, and resilient cloud security for modern teams.</p>
+                        <div class="footer__social">
+                            <a href="https://linkedin.com/company/catchnode" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H6.5V10H9V17ZM7.75 8.7C6.9 8.7 6.5 8.1 6.5 7.5C6.5 6.8 7 6.3 7.8 6.3C8.6 6.3 9 6.8 9 7.5C9 8.1 8.6 8.7 7.75 8.7ZM18 17H15.5V13.2C15.5 12.1 14.7 12 14.5 12C14.3 12 13.5 12.1 13.5 13.2V17H11V10H13.5V11C13.8 10.4 14.6 10 15.5 10C16.5 10 18 10.6 18 13V17Z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/catchnode" class="footer__social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10C2.38 10 2.38 10 2.38 10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.70 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Links -->
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Services</h4>
+                        <ul class="footer__links">
+                            <li><a href="/services/index.html" class="footer__link">All Services</a></li>
+                            <li><a href="/services/helpdesk.html" class="footer__link">IT & Automation Helpdesk</a></li>
+                            <li><a href="/services/automation.html" class="footer__link">Automation & Efficiency</a></li>
+                            <li><a href="/services/cloud.html" class="footer__link">Cloud & Cybersecurity</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Company Links -->
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Company</h4>
+                        <ul class="footer__links">
+                            <li><a href="/about.html" class="footer__link">About Us</a></li>
+                            <li><a href="/cases/index.html" class="footer__link">Case Studies</a></li>
+                            <li><a href="/pricing.html" class="footer__link">Pricing</a></li>
+                            <li><a href="/blog/index.html" class="footer__link">Blog</a></li>
+                            <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Legal Links -->
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Legal</h4>
+                        <ul class="footer__links">
+                            <li><a href="/legal/privacy.html" class="footer__link">Privacy Policy</a></li>
+                            <li><a href="/legal/terms.html" class="footer__link">Terms of Service</a></li>
+                        </ul>
+                        
+                        <h4 class="footer__heading footer__heading--mt">Contact</h4>
+                        <ul class="footer__contact">
+                            <li><a href="mailto:hello@catchnode.com" class="footer__link">hello@catchnode.com</a></li>
+                            <li><a href="tel:+1-555-CATCHNODE" class="footer__link">+1-555-CATCHNODE</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="footer__copyright">&copy; 2025 Catchnode. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

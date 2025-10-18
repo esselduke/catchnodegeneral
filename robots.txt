@@ -1,0 +1,44 @@
+# Catchnode Robots.txt
+# https://catchnode.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Disallow legal pages from indexing
+Disallow: /legal/
+
+# Disallow 404 page
+Disallow: /404.html
+
+# Crawl delay (optional - be respectful to servers)
+# Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://catchnode.com/sitemap.xml
+
+# Specific bot rules (optional examples)
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

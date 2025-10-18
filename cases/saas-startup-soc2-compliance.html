@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How a SaaS startup achieved SOC 2 compliance in 3 months with zero security findings through comprehensive security implementation.">
+    <meta name="keywords" content="SOC 2 compliance, startup security, cybersecurity implementation, SaaS security">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Case Study: SaaS Startup Achieves SOC 2 Compliance – Catchnode">
+    <meta property="og:description" content="Zero findings on first SOC 2 audit through comprehensive security controls implementation.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://catchnode.com/cases/saas-startup-soc2-compliance.html">
+    <meta property="og:image" content="https://catchnode.com/assets/case-startup-security.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Case Study: SaaS Startup SOC 2 Compliance">
+    <meta name="twitter:description" content="Zero findings on first SOC 2 audit in 3 months.">
+    <meta name="twitter:image" content="https://catchnode.com/assets/case-startup-security.jpg">
+    
+    <title>Case Study: SaaS Startup SOC 2 Compliance | Catchnode</title>
+    
+    <!-- Preload Critical Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/global.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CaseStudy",
+      "headline": "SaaS startup passes first SOC 2 audit with zero findings",
+      "description": "A fast-growing SaaS startup achieved SOC 2 Type II compliance in just 3 months by implementing comprehensive security controls including MFA, encryption, backup systems, and security monitoring.",
+      "author": {
+        "@type": "Organization",
+        "name": "Catchnode",
+        "url": "https://catchnode.com"
+      },
+      "datePublished": "2024-09-20",
+      "image": "https://catchnode.com/assets/case-startup-security.jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Catchnode",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://catchnode.com/assets/logo.svg"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="/" class="header__logo" aria-label="Catchnode Home">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="32" height="32" rx="6" fill="#2F6BFF"/>
+                    <path d="M16 8L8 14V24H12V18H20V24H24V14L16 8Z" fill="white"/>
+                </svg>
+                <span class="header__logo-text">Catchnode</span>
+            </a>
+            
+            <nav class="header__nav" id="mainNav" aria-label="Main Navigation">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item header__nav-item--dropdown">
+                        <button class="header__nav-link header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            Services
+                            <svg class="header__dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="currentColor" aria-hidden="true">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <ul class="header__dropdown">
+                            <li><a href="/services/index.html" class="header__dropdown-link">All Services</a></li>
+                            <li><a href="/services/helpdesk.html" class="header__dropdown-link">IT & Automation Helpdesk</a></li>
+                            <li><a href="/services/automation.html" class="header__dropdown-link">Automation & Efficiency</a></li>
+                            <li><a href="/services/cloud.html" class="header__dropdown-link">Cloud & Cybersecurity</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/pricing.html" class="header__nav-link">Pricing</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/cases/index.html" class="header__nav-link">Case Studies</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/about.html" class="header__nav-link">About</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/blog/index.html" class="header__nav-link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a href="/contact.html" class="header__cta btn btn--primary">Contact Us</a>
+            
+            <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <nav class="mobile-menu__nav" aria-label="Mobile Navigation">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a href="/services/index.html" class="mobile-menu__link">All Services</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/services/helpdesk.html" class="mobile-menu__link">IT & Automation Helpdesk</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/services/automation.html" class="mobile-menu__link">Automation & Efficiency</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/services/cloud.html" class="mobile-menu__link">Cloud & Cybersecurity</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/pricing.html" class="mobile-menu__link">Pricing</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/cases/index.html" class="mobile-menu__link">Case Studies</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/about.html" class="mobile-menu__link">About</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/blog/index.html" class="mobile-menu__link">Blog</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/contact.html" class="btn btn--primary mobile-menu__cta">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Case Study Header -->
+        <article class="case-study">
+            <header class="case-study-header">
+                <div class="container">
+                    <div class="case-study-header__breadcrumb">
+                        <a href="/cases/index.html">Case Studies</a>
+                        <span aria-hidden="true">/</span>
+                        <span>Security</span>
+                    </div>
+                    
+                    <div class="case-study-header__content">
+                        <div class="case-study-header__tags">
+                            <span class="case-study-header__tag">Security</span>
+                            <span class="case-study-header__tag">SaaS Startup</span>
+                        </div>
+                        
+                        <h1 class="case-study-header__title">SaaS startup passes first SOC 2 audit with zero findings</h1>
+                        
+                        <p class="case-study-header__subtitle">How we implemented comprehensive security controls—MFA, encryption, backups, and monitoring—enabling a growing startup to achieve SOC 2 Type II compliance in just 3 months and close enterprise deals.</p>
+                        
+                        <div class="case-study-header__meta">
+                            <div class="case-study-header__meta-item">
+                                <strong>Industry:</strong> SaaS / Technology
+                            </div>
+                            <div class="case-study-header__meta-item">
+                                <strong>Company Size:</strong> 25 employees
+                            </div>
+                            <div class="case-study-header__meta-item">
+                                <strong>Timeline:</strong> 3 months
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Key Results -->
+            <section class="case-study-results section section--alt">
+                <div class="container">
+                    <h2 class="case-study-results__title">Key Results</h2>
+                    <div class="case-study-results__grid">
+                        <div class="result-stat">
+                            <div class="result-stat__value">Zero</div>
+                            <div class="result-stat__label">Security findings</div>
+                            <p class="result-stat__description">Passed SOC 2 Type II audit on first attempt with no exceptions or findings</p>
+                        </div>
+                        
+                        <div class="result-stat">
+                            <div class="result-stat__value">3 months</div>
+                            <div class="result-stat__label">Implementation time</div>
+                            <p class="result-stat__description">From initial assessment to audit completion, half the industry average</p>
+                        </div>
+                        
+                        <div class="result-stat">
+                            <div class="result-stat__value">$2M</div>
+                            <div class="result-stat__label">Pipeline unlocked</div>
+                            <p class="result-stat__description">Closed 3 enterprise deals within 60 days of certification</p>
+                        </div>
+                        
+                        <div class="result-stat">
+                            <div class="result-stat__value">100%</div>
+                            <div class="result-stat__label">MFA adoption</div>
+                            <p class="result-stat__description">All employees and contractors using multi-factor authentication</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Challenge -->
+            <section class="case-study-section section">
+                <div class="container">
+                    <div class="case-study-content">
+                        <h2 class="case-study-content__title">The Challenge</h2>
+                        
+                        <p class="case-study-content__text">A fast-growing B2B SaaS startup had reached product-market fit and was closing mid-market deals consistently. But when they started engaging with enterprise customers, every sales conversation hit the same roadblock: "Do you have SOC 2?"</p>
+                        
+                        <p class="case-study-content__text">Without SOC 2 certification, they couldn't even get past procurement with Fortune 500 companies. They had $2M in qualified pipeline stalled, waiting for compliance. Meanwhile, competitors with SOC 2 were winning enterprise deals.</p>
+                        
+                        <div class="case-study-content__highlight">
+                            <h3 class="case-study-content__highlight-title">Critical Issues</h3>
+                            <ul class="case-study-content__list">
+                                <li>No formal security policies or procedures documented</li>
+                                <li>Inconsistent access controls—shared passwords, no MFA</li>
+                                <li>No centralized backup system or disaster recovery plan</li>
+                                <li>Limited visibility into system access and security events</li>
+                                <li>Cloud infrastructure lacked proper segmentation and monitoring</li>
+                                <li>Employee devices unmanaged and potentially vulnerable</li>
+                            </ul>
+                        </div>
+                        
+                        <p class="case-study-content__text">They needed SOC 2 Type II certification fast, but didn't have internal security expertise. Their CTO was focused on product development, and hiring a full-time security team would take 6+ months and cost $500K+ annually.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Solution -->
+            <section class="case-study-section section section--alt">
+                <div class="container">
+                    <div class="case-study-content">
+                        <h2 class="case-study-content__title">Our Solution</h2>
+                        
+                        <p class="case-study-content__text">We designed and implemented a comprehensive security program aligned with SOC 2 Trust Services Criteria, focusing on controls that were both audit-ready and practical for a lean startup to maintain.</p>
+                        
+                        <h3 class="case-study-content__subtitle">Security Implementation Roadmap</h3>
+                        
+                        <div class="case-study-content__steps">
+                            <div class="step-card">
+                                <div class="step-card__number">01</div>
+                                <div class="step-card__content">
+                                    <h4 class="step-card__title">Gap Assessment & Policy Documentation</h4>
+                                    <p class="step-card__description">Conducted security assessment, documented all policies (access control, encryption, incident response, vendor management), and established governance framework with defined roles and responsibilities.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-card">
+                                <div class="step-card__number">02</div>
+                                <div class="step-card__content">
+                                    <h4 class="step-card__title">Access Control & Identity Management</h4>
+                                    <p class="step-card__description">Implemented Okta SSO with MFA for all applications, established role-based access controls, automated user provisioning/deprovisioning, and enabled security monitoring and logging.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-card">
+                                <div class="step-card__number">03</div>
+                                <div class="step-card__content">
+                                    <h4 class="step-card__title">Infrastructure Security & Monitoring</h4>
+                                    <p class="step-card__description">Hardened AWS infrastructure with network segmentation, deployed intrusion detection, implemented automated security scanning, enabled CloudTrail logging, and set up real-time alerting.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-card">
+                                <div class="step-card__number">04</div>
+                                <div class="step-card__content">
+                                    <h4 class="step-card__title">Data Protection & Business Continuity</h4>
+                                    <p class="step-card__description">Enabled encryption at rest and in transit, implemented automated daily backups with testing, created disaster recovery runbooks, and deployed endpoint protection on all devices.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-card">
+                                <div class="step-card__number">05</div>
+                                <div class="step-card__content">
+                                    <h4 class="step-card__title">Security Awareness & Audit Preparation</h4>
+                                    <p class="step-card__description">Trained all employees on security policies, established change management processes, implemented security awareness program, and prepared evidence for audit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-content__highlight case-study-content__highlight--success">
+                            <h3 class="case-study-content__highlight-title">Key Technologies Implemented</h3>
+                            <ul class="case-study-content__list">
+                                <li>Okta SSO with adaptive MFA for centralized authentication</li>
+                                <li>AWS GuardDuty and Security Hub for threat detection</li>
+                                <li>Vanta for compliance monitoring and evidence collection</li>
+                                <li>1Password for secure secrets management</li>
+                                <li>CrowdStrike for endpoint detection and response</li>
+                                <li>Automated backup to AWS S3 with lifecycle policies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Results & Impact -->
+            <section class="case-study-section section">
+                <div class="container">
+                    <div class="case-study-content">
+                        <h2 class="case-study-content__title">Results & Business Impact</h2>
+                        
+                        <p class="case-study-content__text">The company achieved SOC 2 Type II certification in just 3 months—half the typical 6-month timeline. More importantly, the security improvements fundamentally changed their business trajectory and customer trust.</p>
+                        
+                        <div class="impact-grid">
+                            <div class="impact-card">
+                                <h3 class="impact-card__title">Audit Success</h3>
+                                <p class="impact-card__metric">Zero Findings</p>
+                                <p class="impact-card__description">Passed SOC 2 Type II audit on first attempt with no exceptions, findings, or remediation requirements—a rare achievement for first-time audits.</p>
+                            </div>
+                            
+                            <div class="impact-card">
+                                <h3 class="impact-card__title">Revenue Impact</h3>
+                                <p class="impact-card__metric">$2M Closed</p>
+                                <p class="impact-card__description">Closed 3 stalled enterprise deals within 60 days of certification, with average contract values of $650K annually.</p>
+                            </div>
+                            
+                            <div class="impact-card">
+                                <h3 class="impact-card__title">Security Posture</h3>
+                                <p class="impact-card__metric">99.9% Uptime</p>
+                                <p class="impact-card__description">No security incidents since implementation. Automated monitoring and response reduced incident response time from hours to minutes.</p>
+                            </div>
+                            
+                            <div class="impact-card">
+                                <h3 class="impact-card__title">Operational Efficiency</h3>
+                                <p class="impact-card__metric">90% Faster</p>
+                                <p class="impact-card__description">Employee onboarding streamlined with automated provisioning. New hires fully set up in 15 minutes instead of 3 hours.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-content__quote">
+                            <blockquote>
+                                <p>"Catchnode made SOC 2 achievable without derailing our product roadmap. They handled everything—from policy documentation to technical implementation—and we passed our audit with zero findings. Within 60 days, we closed three enterprise deals that had been waiting for our certification. The ROI was immediate."</p>
+                                <footer>
+                                    <cite>Michael Chen</cite>
+                                    <span>Co-Founder & CTO</span>
+                                </footer>
+                            </blockquote>
+                        </div>
+                        
+                        <h3 class="case-study-content__subtitle">Long-Term Benefits</h3>
+                        
+                        <p class="case-study-content__text">Beyond the immediate compliance achievement, the security infrastructure we implemented provides ongoing value:</p>
+                        
+                        <ul class="case-study-content__list">
+                            <li><strong>Competitive Advantage:</strong> Now wins enterprise RFPs that competitors can't even participate in</li>
+                            <li><strong>Customer Confidence:</strong> Security questions in sales calls decreased by 80%, shortening sales cycles</li>
+                            <li><strong>Insurance Savings:</strong> Qualified for cyber insurance at 40% lower premiums due to strong security controls</li>
+                            <li><strong>Scalable Foundation:</strong> Security architecture scales seamlessly as company grows to 100+ employees</li>
+                            <li><strong>Audit Efficiency:</strong> Annual SOC 2 renewal now takes 2 weeks instead of 3 months</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Technology Stack -->
+            <section class="case-study-section section section--alt">
+                <div class="container">
+                    <div class="case-study-content">
+                        <h2 class="case-study-content__title">Technology Stack</h2>
+                        
+                        <div class="tech-stack">
+                            <div class="tech-stack__category">
+                                <h3 class="tech-stack__category-title">Identity & Access</h3>
+                                <ul class="tech-stack__list">
+                                    <li>Okta (SSO & MFA)</li>
+                                    <li>1Password (Secrets management)</li>
+                                    <li>AWS IAM (Infrastructure access)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tech-stack__category">
+                                <h3 class="tech-stack__category-title">Security & Monitoring</h3>
+                                <ul class="tech-stack__list">
+                                    <li>AWS GuardDuty (Threat detection)</li>
+                                    <li>AWS Security Hub (Compliance)</li>
+                                    <li>CrowdStrike (Endpoint protection)</li>
+                                    <li>DataDog (Logging & alerting)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tech-stack__category">
+                                <h3 class="tech-stack__category-title">Compliance & Backup</h3>
+                                <ul class="tech-stack__list">
+                                    <li>Vanta (Compliance automation)</li>
+                                    <li>AWS Backup (Automated backups)</li>
+                                    <li>GitHub Enterprise (Version control)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <section class="case-study-cta">
+                <div class="container">
+                    <div class="case-study-cta__content">
+                        <h2 class="case-study-cta__title">Ready to achieve SOC 2 compliance?</h2>
+                        <p class="case-study-cta__description">Let's discuss your security needs and create a roadmap to compliance. We handle everything from gap assessment to audit support.</p>
+                        <div class="case-study-cta__actions">
+                            <a href="/contact.html" class="btn btn--primary btn--large">Schedule Security Assessment</a>
+                            <a href="/services/cloud.html" class="btn btn--secondary btn--large">Learn About Security Services</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="container">
+                <div class="footer__grid">
+                    <!-- Company Info -->
+                    <div class="footer__column footer__column--brand">
+                        <a href="/" class="footer__logo" aria-label="Catchnode Home">
+                            <img src="/assets/logo.png" width="40%" alt="">
+                        </a>
+                        <p class="footer__tagline">Automate. Secure. Simplify.</p>
+                        <p class="footer__description">Operational IT, intelligent automation, and resilient cloud security for modern teams.</p>
+                        <div class="footer__social">
+                            <a href="https://linkedin.com/company/catchnode" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H6.5V10H9V17ZM7.75 8.7C6.9 8.7 6.5 8.1 6.5 7.5C6.5 6.8 7 6.3 7.8 6.3C8.6 6.3 9 6.8 9 7.5C9 8.1 8.6 8.7 7.75 8.7ZM18 17H15.5V13.2C15.5 12.1 14.7 12 14.5 12C14.3 12 13.5 12.1 13.5 13.2V17H11V10H13.5V11C13.8 10.4 14.6 10 15.5 10C16.5 10 18 10.6 18 13V17Z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/catchnode" class="footer__social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10C2.38 10 2.38 10 2.38 10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.70 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Links -->
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Services</h4>
+                        <ul class="footer__links">
+                            <li><a href="/services/index.html" class="footer__link">All Services</a></li>
+                            <li><a href="/services/helpdesk.html" class="footer__link">IT & Automation Helpdesk</a></li>
+                            <li><a href="/services/automation.html" class="footer__link">Automation & Efficiency</a></li>
+                            <li><a href="/services/cloud.html" class="footer__link">Cloud & Cybersecurity</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Company Links -->
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Company</h4>
+                        <ul class="footer__links">
+                            <li><a href="/about.html" class="footer__link">About Us</a></li>
+                            <li><a href="/cases/index.html" class="footer__link">Case Studies</a></li>
+                            <li><a href="/pricing.html" class="footer__link">Pricing</a></li>
+                            <li><a href="/blog/index.html" class="footer__link">Blog</a></li>
+                            <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Legal Links -->
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Legal</h4>
+                        <ul class="footer__links">
+                            <li><a href="/legal/privacy.html" class="footer__link">Privacy Policy</a></li>
+                            <li><a href="/legal/terms.html" class="footer__link">Terms of Service</a></li>
+                        </ul>
+                        
+                        <h4 class="footer__heading footer__heading--mt">Contact</h4>
+                        <ul class="footer__contact">
+                            <li><a href="mailto:hello@catchnode.com" class="footer__link">hello@catchnode.com</a></li>
+                            <li><a href="tel:+1-555-CATCHNODE" class="footer__link">+1-555-CATCHNODE</a></li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="footer__bottom">
+        <div class="container">
+            <p class="footer__copyright">&copy; 2025 Catchnode. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

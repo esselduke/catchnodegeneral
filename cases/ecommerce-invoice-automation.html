@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How an e-commerce company reduced invoice processing time from 3 days to 4 hours through automated data extraction and validation.">
+    <meta name="keywords" content="invoice automation, e-commerce automation, accounts payable automation, OCR processing">
+    
+    <title>Case Study: E-commerce Invoice Processing Automation | Catchnode</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/global.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CaseStudy",
+      "headline": "E-commerce company reduces invoice processing from 3 days to 4 hours",
+      "description": "Automated invoice extraction, validation, routing, and posting for an e-commerce company handling hundreds of supplier invoices monthly, reducing processing time by 85% and errors by 95%.",
+      "author": {
+        "@type": "Organization",
+        "name": "Catchnode"
+      },
+      "datePublished": "2024-08-10"
+    }
+    </script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="/" class="header__logo" aria-label="Catchnode Home">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="32" height="32" rx="6" fill="#2F6BFF"/>
+                    <path d="M16 8L8 14V24H12V18H20V24H24V14L16 8Z" fill="white"/>
+                </svg>
+                <span class="header__logo-text">Catchnode</span>
+            </a>
+            
+            <nav class="header__nav" id="mainNav" aria-label="Main Navigation">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item header__nav-item--dropdown">
+                        <button class="header__nav-link header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            Services
+                            <svg class="header__dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="currentColor" aria-hidden="true">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <ul class="header__dropdown">
+                            <li><a href="/services/index.html" class="header__dropdown-link">All Services</a></li>
+                            <li><a href="/services/helpdesk.html" class="header__dropdown-link">IT & Automation Helpdesk</a></li>
+                            <li><a href="/services/automation.html" class="header__dropdown-link">Automation & Efficiency</a></li>
+                            <li><a href="/services/cloud.html" class="header__dropdown-link">Cloud & Cybersecurity</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/pricing.html" class="header__nav-link">Pricing</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/cases/index.html" class="header__nav-link">Case Studies</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/about.html" class="header__nav-link">About</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/blog/index.html" class="header__nav-link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a href="/contact.html" class="header__cta btn btn--primary">Contact Us</a>
+            
+            <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <nav class="mobile-menu__nav" aria-label="Mobile Navigation">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item"><a href="/services/index.html" class="mobile-menu__link">All Services</a></li>
+                <li class="mobile-menu__item"><a href="/services/helpdesk.html" class="mobile-menu__link">IT & Automation Helpdesk</a></li>
+                <li class="mobile-menu__item"><a href="/services/automation.html" class="mobile-menu__link">Automation & Efficiency</a></li>
+                <li class="mobile-menu__item"><a href="/services/cloud.html" class="mobile-menu__link">Cloud & Cybersecurity</a></li>
+                <li class="mobile-menu__item"><a href="/pricing.html" class="mobile-menu__link">Pricing</a></li>
+                <li class="mobile-menu__item"><a href="/cases/index.html" class="mobile-menu__link">Case Studies</a></li>
+                <li class="mobile-menu__item"><a href="/about.html" class="mobile-menu__link">About</a></li>
+                <li class="mobile-menu__item"><a href="/blog/index.html" class="mobile-menu__link">Blog</a></li>
+                <li class="mobile-menu__item"><a href="/contact.html" class="btn btn--primary mobile-menu__cta">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main>
+        <article class="case-study">
+            <header class="case-study-header">
+                <div class="container">
+                    <div class="case-study-header__breadcrumb">
+                        <a href="/cases/index.html">Case Studies</a>
+                        <span aria-hidden="true">/</span>
+                        <span>Automation</span>
+                    </div>
+                    
+                    <div class="case-study-header__content">
+                        <div class="case-study-header__tags">
+                            <span class="case-study-header__tag">Automation</span>
+                            <span class="case-study-header__tag">E-commerce</span>
+                        </div>
+                        
+                        <h1 class="case-study-header__title">E-commerce company reduces invoice processing from 3 days to 4 hours</h1>
+                        
+                        <p class="case-study-header__subtitle">How we automated invoice extraction, validation, routing, and posting for an online retailer managing 300+ supplier invoices monthly, eliminating manual data entry and reducing errors by 95%.</p>
+                        
+                        <div class="case-study-header__meta">
+                            <div class="case-study-header__meta-item">
+                                <strong>Industry:</strong> E-commerce / Retail
+                            </div>
+                            <div class="case-study-header__meta-item">
+                                <strong>Company Size:</strong> 75 employees
+                            </div>
+                            <div class="case-study-header__meta-item">
+                                <strong>Timeline:</strong> 6 weeks
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="case-study-results section section--alt">
+                <div class="container">
+                    <h2 class="case-study-results__title">Key Results</h2>
+                    <div class="case-study-results__grid">
+                        <div class="result-stat">
+                            <div class="result-stat__value">85%</div>
+                            <div class="result-stat__label">Faster processing</div>
+                            <p class="result-stat__description">Invoice processing reduced from 3 days to 4 hours per batch</p>
+                        </div>
+                        
+                        <div class="result-stat">
+                            <div class="result-stat__value">95%</div>
+                            <div class="result-stat__label">Fewer errors</div>
+                            <p class="result-stat__description">Data entry errors dropped from 18 per month to less than 1</p>
+                        </div>
+                        
+                        <div class="result-stat">
+                            <div class="result-stat__value">$36K</div>
+                            <div class="result-stat__label">Annual savings</div>
+                            <p class="result-stat__description">Time savings equivalent to one full-time accounts payable clerk</p>
+                        </div>
+                        
+                        <div class="result-stat">
+                            <div class="result-stat__value">300+</div>
+                            <div class="result-stat__label">Invoices/month</div>
+                            <p class="result-stat__description">Processing capacity without additional headcount</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="case-study-section section">
+                <div class="container">
+                    <div class="case-study-content">
+                        <h2 class="case-study-content__title">The Challenge</h2>
+                        
+                        <p class="case-study-content__text">An online retailer selling consumer electronics was growing rapidly—monthly revenue had tripled in 18 months. But their accounts payable process hadn't scaled. Two AP clerks were drowning in paperwork, manually processing 300+ supplier invoices every month.</p>
+                        
+                        <p class="case-study-content__text">The process was entirely manual: Open email attachments, read PDF invoices, type data into QuickBooks, match to purchase orders, route for approval, and eventually process payment. Each invoice took 15-20 minutes of focused work. With 300 invoices monthly, that's 75-100 hours of pure data entry.</p>
+                        
+                        <div class="case-study-content__highlight">
+                            <h3 class="case-study-content__highlight-title">Critical Pain Points</h3>
+                            <ul class="case-study-content__list">
+                                <li>Invoices arriving via email in various formats (PDF, image scans, Word docs)</li>
+                                <li>Manual data entry leading to typos and transposed numbers</li>
+                                <li>Delayed processing causing late payment fees and strained vendor relationships</li>
+                                <li>No visibility into pending invoices or approval status</li>
+                                <li>AP team working overtime every month-end close</li>
+                                <li>Difficulty scaling—couldn't afford to hire another AP clerk</li>
+                            </ul>
+                        </div>
+                        
+                        <p class="case-study-content__text">The CFO calculated they were losing $8,000 annually to late payment penalties alone. More concerning: manual errors were causing duplicate payments and missing early payment discounts worth 2% (roughly $48K annually on $2.4M in supplier payments).</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="case-study-section section section--alt">
+                <div class="container">
+                    <div class="case-study-content">
+                        <h2 class="case-study-content__title">Our Solution</h2>
+                        
+                        <p class="case-study-content__text">We designed an end-to-end invoice automation system that handles everything from email receipt to QuickBooks posting, requiring human intervention only for exceptions and final approval.</p>
+                        
+                        <h3 class="case-study-content__subtitle">Automation Workflow</h3>
+                        
+                        <div class="case-study-content__steps">
+                            <div class="step-card">
+                                <div class="step-card__number">01</div>
+                                <div class="step-card__content">
+                                    <h4 class="step-card__title">Intelligent Document Capture</h4>
+                                    <p class="step-card__description">Power Automate monitors dedicated AP inbox, extracts attachments, and uses AI Builder's invoice processing model to extract key fields (vendor, amount, date, line items, tax) with 98% accuracy.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-card">
+                                <div class="step-card__number">02</div>
+                                <div class="step-card__content">
+                                    <h4 class="step-card__title">Automated Validation & Matching</h4>
+                                    <p class="step-card__description">System validates extracted data against business rules, matches invoices to purchase orders in their ERP, flags discrepancies, and checks for duplicates automatically.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-card">
+                                <div class="step-card__number">03</div>
+                                <div class="step-card__content">
+                                    <h4 class="step-card__title">Smart Routing & Approval</h4>
+                                    <p class="step-card__description">Invoices automatically route to appropriate managers based on amount thresholds and department. Managers approve via email or mobile Teams app with one click.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-card">
+                                <div class="step-card__number">04</div>
+                                <div class="step-card__content">
+                                    <h4 class="step-card__title">QuickBooks Integration & Posting</h4>
+                                    <p class="step-card__description">Once approved, invoice data posts directly to QuickBooks with proper coding, attaches PDF copy to transaction, and schedules payment based on terms to capture early payment discounts.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-content__highlight case-study-content__highlight--success">
+                            <h3 class="case-study-content__highlight-title">Exception Handling</h3>
+                            <ul class="case-study-content__list">
+                                <li>Low-confidence extractions flagged for manual review</li>
+                                <li>PO mismatches sent to purchasing team for resolution</li>
+                                <li>Duplicate invoice warnings prevent double payments</li>
+                                <li>Dashboard shows all pending approvals and exceptions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="case-study-section section">
+                <div class="container">
+                    <div class="case-study-content">
+                        <h2 class="case-study-content__title">Results & Business Impact</h2>
+                        
+                        <p class="case-study-content__text">The automation transformed accounts payable from a bottleneck into a competitive advantage. What once took 3 days of focused work now happens in 4 hours—mostly unattended processing overnight.</p>
+                        
+                        <div class="impact-grid">
+                            <div class="impact-card">
+                                <h3 class="impact-card__title">Time Savings</h3>
+                                <p class="impact-card__metric">15 hrs → 2 hrs</p>
+                                <p class="impact-card__description">Average weekly invoice processing time dropped from 15 hours to 2 hours of exception handling. AP team now focuses on vendor relationships and cash flow optimization.</p>
+                            </div>
+                            
+                            <div class="impact-card">
+                                <h3 class="impact-card__title">Error Reduction</h3>
+                                <p class="impact-card__metric">18 → 0.8/month</p>
+                                <p class="impact-card__description">Data entry errors dropped from 18 per month to less than 1. No duplicate payments or missed discounts since implementation.</p>
+                            </div>
+                            
+                            <div class="impact-card">
+                                <h3 class="impact-card__title">Early Payment Capture</h3>
+                                <p class="impact-card__metric">$48K saved</p>
+                                <p class="impact-card__description">Now capturing 90% of available 2% early payment discounts, saving $48K annually on supplier payments.</p>
+                            </div>
+                            
+                            <div class="impact-card">
+                                <h3 class="impact-card__title">Vendor Relations</h3>
+                                <p class="impact-card__metric">Zero late fees</p>
+                                <p class="impact-card__description">Eliminated all late payment penalties. Average payment time reduced from 42 days to 28 days, improving vendor relationships.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study-content__quote">
+                            <blockquote>
+                                <p>"This automation gave us back control of AP. We're processing triple the invoice volume with the same team, capturing early payment discounts we always missed, and our vendors are actually complimenting us on payment speed. The ROI was visible within the first month."</p>
+                                <footer>
+                                    <cite>Rachel Morrison</cite>
+                                    <span>Chief Financial Officer</span>
+                                </footer>
+                            </blockquote>
+                        </div>
+                        
+                        <h3 class="case-study-content__subtitle">Unexpected Benefits</h3>
+                        
+                        <ul class="case-study-content__list">
+                            <li><strong>Cash Flow Visibility:</strong> Real-time dashboard shows upcoming payment obligations, enabling better cash management</li>
+                            <li><strong>Month-End Close:</strong> Financial close accelerated by 2 days due to real-time posting</li>
+                            <li><strong>Audit Trail:</strong> Complete digital record of all approvals and changes simplifies year-end audit</li>
+                            <li><strong>Scalability:</strong> System easily handles volume spikes during holiday season (500+ invoices/month)</li>
+                            <li><strong>Employee Satisfaction:</strong> AP team now does strategic work instead of data entry</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="case-study-section section section--alt">
+                <div class="container">
+                    <div class="case-study-content">
+                        <h2 class="case-study-content__title">Technology Stack</h2>
+                        
+                        <div class="tech-stack">
+                            <div class="tech-stack__category">
+                                <h3 class="tech-stack__category-title">Automation Platform</h3>
+                                <ul class="tech-stack__list">
+                                    <li>Microsoft Power Automate</li>
+                                    <li>AI Builder (Invoice processing)</li>
+                                    <li>Azure Cognitive Services</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tech-stack__category">
+                                <h3 class="tech-stack__category-title">Integration Points</h3>
+                                <ul class="tech-stack__list">
+                                    <li>QuickBooks Online</li>
+                                    <li>Microsoft Outlook (Email)</li>
+                                    <li>Microsoft Teams (Approvals)</li>
+                                    <li>SharePoint (Document storage)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tech-stack__category">
+                                <h3 class="tech-stack__category-title">Reporting & Monitoring</h3>
+                                <ul class="tech-stack__list">
+                                    <li>Power BI (Analytics dashboard)</li>
+                                    <li>Email notifications</li>
+                                    <li>Exception alerts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="case-study-cta">
+                <div class="container">
+                    <div class="case-study-cta__content">
+                        <h2 class="case-study-cta__title">Ready to automate your invoice processing?</h2>
+                        <p class="case-study-cta__description">Let's analyze your AP workflow and show you how automation can eliminate manual data entry. Most implementations pay for themselves in 3-6 months.</p>
+                        <div class="case-study-cta__actions">
+                            <a href="/contact.html" class="btn btn--primary btn--large">Schedule Process Review</a>
+                            <a href="/services/automation.html" class="btn btn--secondary btn--large">Learn About Automation</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__column footer__column--brand">
+                        <a href="/" class="footer__logo" aria-label="Catchnode Home">
+                            <img src="/assets/logo.png" width="40%" alt="">
+                        </a>
+                        <p class="footer__tagline">Automate. Secure. Simplify.</p>
+                        <p class="footer__description">Operational IT, intelligent automation, and resilient cloud security for modern teams.</p>
+                        <div class="footer__social">
+                            <a href="https://linkedin.com/company/catchnode" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H6.5V10H9V17ZM7.75 8.7C6.9 8.7 6.5 8.1 6.5 7.5C6.5 6.8 7 6.3 7.8 6.3C8.6 6.3 9 6.8 9 7.5C9 8.1 8.6 8.7 7.75 8.7ZM18 17H15.5V13.2C15.5 12.1 14.7 12 14.5 12C14.3 12 13.5 12.1 13.5 13.2V17H11V10H13.5V11C13.8 10.4 14.6 10 15.5 10C16.5 10 18 10.6 18 13V17Z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/catchnode" class="footer__social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10C2.38 10 2.38 10 2.38 10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.70 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Services</h4>
+                        <ul class="footer__links">
+                            <li><a href="/services/index.html" class="footer__link">All Services</a></li>
+                            <li><a href="/services/helpdesk.html" class="footer__link">IT & Automation Helpdesk</a></li>
+                            <li><a href="/services/automation.html" class="footer__link">Automation & Efficiency</a></li>
+                            <li><a href="/services/cloud.html" class="footer__link">Cloud & Cybersecurity</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Company</h4>
+                        <ul class="footer__links">
+                            <li><a href="/about.html" class="footer__link">About Us</a></li>
+                            <li><a href="/cases/index.html" class="footer__link">Case Studies</a></li>
+                            <li><a href="/pricing.html" class="footer__link">Pricing</a></li>
+                            <li><a href="/blog/index.html" class="footer__link">Blog</a></li>
+                            <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Legal</h4>
+                        <ul class="footer__links">
+                            <li><a href="/legal/privacy.html" class="footer__link">Privacy Policy</a></li>
+                            <li><a href="/legal/terms.html" class="footer__link">Terms of Service</a></li>
+                        </ul>
+                        
+                        <h4 class="footer__heading footer__heading--mt">Contact</h4>
+                        <ul class="footer__contact">
+                            <li><a href="mailto:hello@catchnode.com" class="footer__link">hello@catchnode.com</a></li>
+                            <li><a href="tel:+1-555-CATCHNODE" class="footer__link">+1-555-CATCHNODE</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer__bottom">
+            <div class="container">
+                <p class="footer__copyright">&copy; 2025 Catchnode. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/js/main.js" defer></script>
+</body>
+</html>
