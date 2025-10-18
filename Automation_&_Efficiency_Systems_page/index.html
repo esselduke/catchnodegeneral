@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Custom office automations using Excel, Power Automate, and scripts. Build intelligent report bots, dashboards, and document generation workflows with Catchnode.">
+    <meta name="keywords" content="business automation, Power Automate, Excel macros, workflow automation, process automation, reporting dashboards">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Automation & Efficiency Systems – Catchnode">
+    <meta property="og:description" content="Eliminate repetitive tasks with custom automation solutions. Excel macros, Power Automate, dashboards, and document generation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://catchnode.com/services/automation.html">
+    <meta property="og:image" content="https://catchnode.com/assets/og-automation.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Automation & Efficiency Systems – Catchnode">
+    <meta name="twitter:description" content="Custom office automations that eliminate repetitive tasks and human error.">
+    <meta name="twitter:image" content="https://catchnode.com/assets/twitter-automation.jpg">
+    
+    <title>Automation & Efficiency Systems – Custom Workflow Solutions | Catchnode</title>
+    
+    <!-- Preload Critical Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/global.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Business Automation & Process Efficiency",
+      "provider": {
+        "@type": "Organization",
+        "name": "Catchnode",
+        "url": "https://catchnode.com"
+      },
+      "areaServed": "US",
+      "description": "Custom office automation solutions using Excel, Power Automate, Python scripts, and API integrations to eliminate repetitive tasks and streamline business workflows.",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceRange": "$$$"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="/" class="header__logo" aria-label="Catchnode Home">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="32" height="32" rx="6" fill="#2F6BFF"/>
+                    <path d="M16 8L8 14V24H12V18H20V24H24V14L16 8Z" fill="white"/>
+                </svg>
+                <span class="header__logo-text">Catchnode</span>
+            </a>
+            
+            <nav class="header__nav" id="mainNav" aria-label="Main Navigation">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item header__nav-item--dropdown">
+                        <button class="header__nav-link header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            Services
+                            <svg class="header__dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="currentColor" aria-hidden="true">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <ul class="header__dropdown">
+                            <li><a href="/services/index.html" class="header__dropdown-link">All Services</a></li>
+                            <li><a href="/services/helpdesk.html" class="header__dropdown-link">IT & Automation Helpdesk</a></li>
+                            <li><a href="/services/automation.html" class="header__dropdown-link">Automation & Efficiency</a></li>
+                            <li><a href="/services/cloud.html" class="header__dropdown-link">Cloud & Cybersecurity</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/pricing.html" class="header__nav-link">Pricing</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/cases/index.html" class="header__nav-link">Case Studies</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/about.html" class="header__nav-link">About</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="/blog/index.html" class="header__nav-link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <a href="/contact.html" class="header__cta btn btn--primary">Contact Us</a>
+            
+            <button class="header__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+                <span class="header__hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <nav class="mobile-menu__nav" aria-label="Mobile Navigation">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a href="/services/index.html" class="mobile-menu__link">All Services</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/services/helpdesk.html" class="mobile-menu__link">IT & Automation Helpdesk</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/services/automation.html" class="mobile-menu__link">Automation & Efficiency</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/services/cloud.html" class="mobile-menu__link">Cloud & Cybersecurity</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/pricing.html" class="mobile-menu__link">Pricing</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/cases/index.html" class="mobile-menu__link">Case Studies</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/about.html" class="mobile-menu__link">About</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/blog/index.html" class="mobile-menu__link">Blog</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="/contact.html" class="btn btn--primary mobile-menu__cta">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Service Hero -->
+        <section class="service-hero">
+            <div class="container">
+                <div class="service-hero__breadcrumb">
+                    <a href="/services/index.html">Services</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Automation & Efficiency Systems</span>
+                </div>
+                
+                <div class="service-hero__content">
+                    <h1 class="service-hero__title">Automation & Efficiency Systems</h1>
+                    <p class="service-hero__subtitle">Eliminate repetitive tasks and human error with custom automation solutions. We build intelligent systems using Excel macros, Power Automate, Python scripts, and API integrations to streamline your reporting, data processing, and document workflows.</p>
+                    <div class="service-hero__cta">
+                        <a href="/contact.html" class="btn btn--primary btn--large">Get Started</a>
+                        <a href="/pricing.html" class="btn btn--secondary btn--large">View Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Problem / Solution / Outcome -->
+        <section class="service-pso section">
+            <div class="container">
+                <div class="pso-grid">
+                    <article class="pso-card">
+                        <div class="pso-card__label">The Problem</div>
+                        <h2 class="pso-card__title">Manual work consumes your team's time</h2>
+                        <p class="pso-card__description">Your employees spend hours each week on repetitive tasks—copying data between systems, generating reports, formatting documents, sending routine emails. These manual processes waste valuable time, introduce errors, and prevent your team from focusing on strategic work.</p>
+                    </article>
+                    
+                    <article class="pso-card">
+                        <div class="pso-card__label">Our Solution</div>
+                        <h2 class="pso-card__title">Custom automation that works for you</h2>
+                        <p class="pso-card__description">We analyze your workflows and build tailored automation systems that handle the repetitive work. From Excel macros that process data in seconds to Power Automate flows that generate reports automatically, we create solutions that fit your specific needs and existing tools.</p>
+                    </article>
+                    
+                    <article class="pso-card pso-card--highlight">
+                        <div class="pso-card__label">The Outcome</div>
+                        <h2 class="pso-card__title">Reclaim time and eliminate errors</h2>
+                        <p class="pso-card__description">Your team reclaims dozens of hours each month for strategic work. Reports generate themselves. Data flows seamlessly between systems. Errors disappear. Most clients see 60% reduction in manual hours and ROI within 3-6 months.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Service Details -->
+        <section class="service-details section section--alt">
+            <div class="container">
+                <header class="section__header section__header--centered">
+                    <h2 class="section__title">What we automate</h2>
+                    <p class="section__subtitle">From simple Excel macros to complex multi-system integrations, we build automation solutions that transform how your business operates.</p>
+                </header>
+                
+                <div class="service-features-grid">
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="16" cy="16" r="14" fill="#EEF4FF"/>
+                                <path d="M10 12H22V14H10V12ZM10 16H22V18H10V16ZM10 20H18V22H10V20Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card__title">Automated Report Generation</h3>
+                        <p class="feature-card__description">Build systems that pull data from multiple sources, format it consistently, and generate executive-ready reports automatically on any schedule you need.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="16" cy="16" r="14" fill="#EEF4FF"/>
+                                <path d="M20 10H12C10.9 10 10 10.9 10 12V20C10 21.1 10.9 22 12 22H20C21.1 22 22 21.1 22 20V12C22 10.9 21.1 10 20 10ZM18 16H17V17H15V16H14V14H15V13H17V14H18V16Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card__title">Excel Macros & Power Automate</h3>
+                        <p class="feature-card__description">Custom VBA macros and Power Automate flows that transform spreadsheets into powerful automation engines for data processing and analysis.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="16" cy="16" r="14" fill="#EEF4FF"/>
+                                <path d="M12 10V22H20V10H12ZM18 20H14V18H18V20ZM18 16H14V14H18V16ZM18 12H14V10H18V12Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card__title">Dashboard Development</h3>
+                        <p class="feature-card__description">Real-time business intelligence dashboards that consolidate data from multiple systems into visual, actionable insights for decision-makers.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="16" cy="16" r="14" fill="#EEF4FF"/>
+                                <path d="M20 8H12C10.9 8 10 8.9 10 10V22C10 23.1 10.9 24 12 24H20C21.1 24 22 23.1 22 22V10C22 8.9 21.1 8 20 8ZM20 22H12V10H20V22ZM14 12H18V14H14V12ZM14 15H18V17H14V15ZM14 18H16V20H14V18Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card__title">Document Generation</h3>
+                        <p class="feature-card__description">Automated creation of invoices, proposals, contracts, and reports from templates—pulling data from your systems to generate polished documents instantly.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="16" cy="16" r="14" fill="#EEF4FF"/>
+                                <path d="M16 8L12 12H14V16H18V12H20L16 8ZM10 18V20H22V18H10Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card__title">Data Entry Automation</h3>
+                        <p class="feature-card__description">Intelligent systems that extract data from emails, PDFs, and forms, then validate and route it to the correct destination—eliminating manual data entry.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="16" cy="16" r="14" fill="#EEF4FF"/>
+                                <path d="M22 10H10C8.9 10 8 10.9 8 12V20C8 21.1 8.9 22 10 22H14L16 24L18 22H22C23.1 22 24 21.1 24 20V12C24 10.9 23.1 10 22 10ZM20 18H12V16H20V18ZM20 14H12V12H20V14Z" fill="#2F6BFF"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-card__title">Cross-Platform Integrations</h3>
+                        <p class="feature-card__description">Connect your business tools seamlessly—Salesforce to QuickBooks, Gmail to Excel, Slack to your CRM—so data flows automatically where it needs to go.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Automation Examples -->
+        <section class="service-examples section">
+            <div class="container">
+                <header class="section__header section__header--centered">
+                    <h2 class="section__title">Real automation systems we've built</h2>
+                    <p class="section__subtitle">See how we've helped businesses like yours eliminate manual work and transform their operations with custom automation.</p>
+                </header>
+                
+                <div class="examples-grid">
+                    <article class="example-card">
+                        <div class="example-card__number">01</div>
+                        <h3 class="example-card__title">Automated Weekly Executive Dashboard</h3>
+                        <p class="example-card__description">A professional services firm needed weekly executive reports pulling data from five different systems. We built a Power Automate workflow that aggregates data from Salesforce, QuickBooks, project management software, time tracking, and their CRM—then generates a formatted PDF dashboard and emails it every Monday morning at 8 AM.</p>
+                        <div class="example-card__impact">
+                            <strong>Impact:</strong> 40 hours saved monthly, zero errors, executives have data before their Monday meeting
+                        </div>
+                    </article>
+                    
+                    <article class="example-card">
+                        <div class="example-card__number">02</div>
+                        <h3 class="example-card__title">Invoice Processing & Approval Workflow</h3>
+                        <p class="example-card__description">An e-commerce company was manually processing hundreds of supplier invoices each month. We created a system that extracts data from invoice PDFs, validates it against purchase orders, routes invoices for approval based on amount thresholds, and posts approved invoices to their accounting system automatically.</p>
+                        <div class="example-card__impact">
+                            <strong>Impact:</strong> Invoice processing time reduced from 3 days to 4 hours, 95% reduction in data entry errors
+                        </div>
+                    </article>
+                    
+                    <article class="example-card">
+                        <div class="example-card__number">03</div>
+                        <h3 class="example-card__title">Client Onboarding Document Generator</h3>
+                        <p class="example-card__description">A consulting firm spent hours creating customized contracts, SOWs, and welcome packets for each new client. We built a system where sales reps fill out a simple form, and the automation generates all necessary documents with correct client data, branding, pricing, and legal terms—ready for signature in minutes instead of hours.</p>
+                        <div class="example-card__impact">
+                            <strong>Impact:</strong> Contract creation time from 4 hours to 15 minutes, consistent formatting across all documents
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Outcomes / Metrics -->
+        <section class="service-metrics section section--alt">
+            <div class="container">
+                <header class="section__header section__header--centered">
+                    <h2 class="section__title">Measurable results from our automation systems</h2>
+                </header>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-card__value">60%</div>
+                        <div class="metric-card__label">Reduction in manual hours</div>
+                        <p class="metric-card__description">On average, our clients reclaim more than half their time previously spent on repetitive tasks.</p>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-card__value">85%</div>
+                        <div class="metric-card__label">Fewer errors</div>
+                        <p class="metric-card__description">Automation eliminates human error in data entry, reporting, and routine workflows.</p>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-card__value">3-6 mo</div>
+                        <div class="metric-card__label">Typical ROI timeline</div>
+                        <p class="metric-card__description">Most automation projects pay for themselves within 3-6 months through time savings.</p>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-card__value">24/7</div>
+                        <div class="metric-card__label">Automated operation</div>
+                        <p class="metric-card__description">Your automations work around the clock, processing data and generating reports even while you sleep.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonial -->
+        <section class="service-testimonial section">
+            <div class="container">
+                <blockquote class="testimonial-feature">
+                    <div class="testimonial-feature__quote">
+                        <p>"The automation systems Catchnode built for us have been transformational. We eliminated an entire day's worth of manual data entry each week, and our reporting accuracy went from 75% to 100%. The ROI was immediate, and our finance team can now focus on analysis instead of spreadsheet gymnastics."</p>
+                    </div>
+                    <footer class="testimonial-feature__author">
+                        <img src="/assets/testimonial-automation.jpg" alt="" width="64" height="64" class="testimonial-feature__avatar" loading="lazy">
+                        <div class="testimonial-feature__info">
+                            <cite class="testimonial-feature__name">Michael Rodriguez</cite>
+                            <p class="testimonial-feature__title">Finance Director, Global Dynamics</p>
+                        </div>
+                    </footer>
+                </blockquote>
+            </div>
+        </section>
+        
+        <!-- Pricing Teaser -->
+        <section class="service-pricing section section--alt">
+            <div class="container">
+                <div class="pricing-teaser">
+                    <div class="pricing-teaser__content">
+                        <h2 class="pricing-teaser__title">Automation projects starting at $2,500</h2>
+                        <p class="pricing-teaser__description">Most automation projects are scoped as fixed-price engagements with clear deliverables and timelines. We also offer ongoing automation support as part of our monthly service plans.</p>
+                        <ul class="pricing-teaser__features">
+                            <li>Discovery session to map current workflows</li>
+                            <li>Custom solution design and development</li>
+                            <li>Testing, deployment, and team training</li>
+                            <li>30-day support and optimization period</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-teaser__cta">
+                        <a href="/pricing.html" class="btn btn--primary btn--large">View Full Pricing</a>
+                        <a href="/contact.html" class="btn btn--secondary btn--large">Request Project Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-strip">
+            <div class="container">
+                <div class="cta-strip__content">
+                    <h2 class="cta-strip__title">Ready to automate your repetitive work?</h2>
+                    <p class="cta-strip__subtitle">Schedule a workflow analysis call to identify automation opportunities in your business. We'll show you exactly how much time and money you can save.</p>
+                </div>
+                <div class="cta-strip__actions">
+                    <a href="/contact.html" class="btn btn--primary btn--large">Book Workflow Analysis</a>
+                    <a href="/services/index.html" class="btn btn--secondary btn--large">Explore All Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="container">
+                <div class="footer__grid">
+                    <!-- Company Info -->
+                    <div class="footer__column footer__column--brand">
+                        <a href="/" class="footer__logo" aria-label="Catchnode Home">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect width="32" height="32" rx="6" fill="#2F6BFF"/>
+                                <path d="M16 8L8 14V24H12V18H20V24H24V14L16 8Z" fill="white"/>
+                            </svg>
+                            <span class="footer__logo-text">Catchnode</span>
+                        </a>
+                        <p class="footer__tagline">Automate. Secure. Simplify.</p>
+                        <p class="footer__description">Operational IT, intelligent automation, and resilient cloud security for modern teams.</p>
+                        <div class="footer__social">
+                            <a href="https://linkedin.com/company/catchnode" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H6.5V10H9V17ZM7.75 8.7C6.9 8.7 6.5 8.1 6.5 7.5C6.5 6.8 7 6.3 7.8 6.3C8.6 6.3 9 6.8 9 7.5C9 8.1 8.6 8.7 7.75 8.7ZM18 17H15.5V13.2C15.5 12.1 14.7 12 14.5 12C14.3 12 13.5 12.1 13.5 13.2V17H11V10H13.5V11C13.8 10.4 14.6 10 15.5 10C16.5 10 18 10.6 18 13V17Z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/catchnode" class="footer__social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10C2.38 10 2.38 10 2.38 10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.70 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Links -->
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Services</h4>
+                        <ul class="footer__links">
+                            <li><a href="/services/index.html" class="footer__link">All Services</a></li>
+                            <li><a href="/services/helpdesk.html" class="footer__link">IT & Automation Helpdesk</a></li>
+                            <li><a href="/services/automation.html" class="footer__link">Automation & Efficiency</a></li>
+                            <li><a href="/services/cloud.html" class="footer__link">Cloud & Cybersecurity</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Company Links -->
+                    <div class="footer__column">
+                        <h4 class="footer__heading">Company</h4>
+                        <ul class="footer__links">
+                            <li><a href="/about.html" class="footer__link">About Us</a></li>
+                            <li><a href="/cases/index.html" class="footer__link">Case Studies</a></li>
+                            <li><a href="/pricing.html" class="footer__link">Pricing</a></li>
+                            <li><a href="/blog/index.html" class="footer__link">Blog</a></li>
+                            <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal Links -->
+                <div class="footer__column">
+                    <h4 class="footer__heading">Legal</h4>
+                    <ul class="footer__links">
+                        <li><a href="/legal/privacy.html" class="footer__link">Privacy Policy</a></li>
+                        <li><a href="/legal/terms.html" class="footer__link">Terms of Service</a></li>
+                    </ul>
+                    
+                    <h4 class="footer__heading footer__heading--mt">Contact</h4>
+                    <ul class="footer__contact">
+                        <li><a href="mailto:hello@catchnode.com" class="footer__link">hello@catchnode.com</a></li>
+                        <li><a href="tel:+1-555-CATCHNODE" class="footer__link">+1-555-CATCHNODE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer__bottom">
+        <div class="container">
+            <p class="footer__copyright">&copy; 2025 Catchnode. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="/js/main.js" defer></script>
+</body>
+</html>
