@@ -764,7 +764,8 @@ initServicePageAnimations();
 
 // Animate metric values on scroll into view (count-up effect)
 function initMetricCountUp() {
-    const metricValues = document.querySelectorAll('.metric-card__value');
+    const metricValues = document.querySelectorAll('.metric-card__value, .outcome-card__metric');
+    // const metricValues = document.querySelectorAll('.metric-card__value');
     
     metricValues.forEach(metricValue => {
         // Only animate numeric values
