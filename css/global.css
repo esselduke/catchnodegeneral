@@ -257,6 +257,12 @@ ul, ol {
     transition: opacity var(--transition-base);
 }
 
+.header__logo img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
 .header__logo:hover,
 .header__logo:focus {
     opacity: 0.8;
@@ -2671,6 +2677,7 @@ body.scroll-lock {
     
     .cases-hero__title {
         font-size: 2rem;
+        /* white-space: normal; */
     }
     
     .cases-hero__subtitle {
