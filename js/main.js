@@ -1085,7 +1085,7 @@ caseStudySections.forEach(section => {
 
 
 /* ====================================
-   NEW ABOUT PAGE - ADDITIONAL JS
+   ABOUT PAGE - COMPLETE JAVASCRIPT
    ==================================== */
 
 // Apply reveal animations to new about page sections
@@ -1145,23 +1145,33 @@ function initNewAboutPageAnimations() {
         }
     });
     
-    // Feature columns
-    const featureColumns = document.querySelectorAll('.feature-column');
-    featureColumns.forEach((column, index) => {
-        column.classList.add('reveal');
-        column.style.transitionDelay = `${index * 0.15}s`;
+    // Service Pillar cards
+    const pillarCards = document.querySelectorAll('.pillar-card');
+    pillarCards.forEach((card, index) => {
+        card.classList.add('reveal');
+        card.style.transitionDelay = `${index * 0.15}s`;
         if (typeof observer !== 'undefined') {
-            observer.observe(column);
+            observer.observe(card);
         }
     });
     
-    // Testimonials
-    const testimonials = document.querySelectorAll('.testimonial-simple');
-    testimonials.forEach((testimonial, index) => {
-        testimonial.classList.add('reveal');
-        testimonial.style.transitionDelay = `${index * 0.15}s`;
+    // Results stats
+    const statItems = document.querySelectorAll('.stat-item');
+    statItems.forEach((item, index) => {
+        item.classList.add('reveal');
+        item.style.transitionDelay = `${index * 0.1}s`;
         if (typeof observer !== 'undefined') {
-            observer.observe(testimonial);
+            observer.observe(item);
+        }
+    });
+    
+    // Story cards (client testimonials)
+    const storyCards = document.querySelectorAll('.story-card');
+    storyCards.forEach((card, index) => {
+        card.classList.add('reveal');
+        card.style.transitionDelay = `${index * 0.15}s`;
+        if (typeof observer !== 'undefined') {
+            observer.observe(card);
         }
     });
     
@@ -1170,13 +1180,6 @@ function initNewAboutPageAnimations() {
     if (finalCta && typeof observer !== 'undefined') {
         finalCta.classList.add('reveal');
         observer.observe(finalCta);
-    }
-    
-    // Logos
-    const logosSection = document.querySelector('.logos-section');
-    if (logosSection && typeof observer !== 'undefined') {
-        logosSection.classList.add('reveal');
-        observer.observe(logosSection);
     }
 }
 
@@ -1211,53 +1214,64 @@ if (document.querySelector('.photo-grid')) {
     initPhotoGridEffects();
 }
 
-// Smooth number animation for "500+" in final CTA (if needed)
-function animateCTANumber() {
-    const ctaTitle = document.querySelector('.final-cta__title');
-    if (!ctaTitle) return;
+// Smooth number animation for stats in final CTA
+function animateStatsNumbers() {
+    const statValues = document.querySelectorAll('.stat-item__value');
     
-    // Check if title contains "SEO+" or similar number
-    const text = ctaTitle.textContent;
-    const numberMatch = text.match(/(\d+)\+/);
-    
-    if (numberMatch) {
-        const targetNumber = parseInt(numberMatch[1]);
-        const fullText = text;
+    statValues.forEach(statValue => {
+        // Only animate numeric values
+        const text = statValue.textContent.trim();
+        const hasNumber = /\d/.test(text);
         
-        const ctaObserver = new IntersectionObserver((entries) => {
+        if (!hasNumber) return;
+        
+        // Extract number from text (e.g., "200+" -> 200, "60%" -> 60, "24/7" -> skip, "15min" -> 15)
+        const matches = text.match(/(\d+)/);
+        if (!matches) return;
+        
+        const targetNumber = parseInt(matches[0]);
+        const prefix = text.split(matches[0])[0];
+        const suffix = text.split(matches[0])[1] || '';
+        
+        // Skip time formats like "24/7" or "15min" for count-up (they look weird animating)
+        if (text.includes('/') || text.includes('min')) {
+            return;
+        }
+        
+        // Create intersection observer for count-up animation
+        const statObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting && !ctaTitle.dataset.animated) {
-                    ctaTitle.dataset.animated = 'true';
-                    
-                    let current = 0;
-                    const increment = targetNumber / 50;
-                    const duration = 1500;
-                    const stepTime = duration / 50;
-                    
-                    const timer = setInterval(() => {
-                        current += increment;
-                        if (current >= targetNumber) {
-                            current = targetNumber;
-                            clearInterval(timer);
-                        }
-                        
-                        // Replace number in text
-                        ctaTitle.textContent = fullText.replace(/\d+\+/, Math.floor(current) + '+');
-                    }, stepTime);
-                    
-                    ctaObserver.unobserve(entry.target);
+                if (entry.isIntersecting && !statValue.dataset.animated) {
+                    statValue.dataset.animated = 'true';
+                    animateValue(statValue, 0, targetNumber, 1500, prefix, suffix);
+                    statObserver.unobserve(entry.target);
                 }
             });
         }, {
             threshold: 0.5
         });
         
-        ctaObserver.observe(ctaTitle);
-    }
+        statObserver.observe(statValue);
+    });
 }
 
-// Initialize CTA number animation
-animateCTANumber();
+function animateValue(element, start, end, duration, prefix = '', suffix = '') {
+    const range = end - start;
+    const increment = range / (duration / 16); // 60fps
+    let current = start;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= end) {
+            current = end;
+            clearInterval(timer);
+        }
+        element.textContent = prefix + Math.floor(current) + suffix;
+    }, 16);
+}
+
+// Initialize stats number animations
+animateStatsNumbers();
 
 // Parallax effect for photo grid on scroll (optional enhancement)
 function initPhotoParallax() {
@@ -1265,6 +1279,18 @@ function initPhotoParallax() {
     if (!photoGrid) return;
     
     const photoItems = photoGrid.querySelectorAll('.photo-grid__item');
+    
+    // Throttle function for performance
+    function throttle(func, limit) {
+        let inThrottle;
+        return function(...args) {
+            if (!inThrottle) {
+                func.apply(this, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        };
+    }
     
     const handleScroll = throttle(() => {
         const scrolled = window.pageYOffset;
@@ -1313,7 +1339,7 @@ if (document.querySelector('.team-grid')) {
     initTeamMemberInteractions();
 }
 
-// Principle items expand on click (optional interactive feature)
+// Principle items expand on click (mobile enhancement)
 function initPrincipleExpand() {
     const principleItems = document.querySelectorAll('.principle-item');
     
@@ -1323,7 +1349,7 @@ function initPrincipleExpand() {
         
         if (!title || !description) return;
         
-        // Make title clickable (mobile enhancement)
+        // Make title clickable on mobile for better UX
         if (window.innerWidth <= 768) {
             title.style.cursor = 'pointer';
             
@@ -1331,16 +1357,23 @@ function initPrincipleExpand() {
             description.style.maxHeight = '0';
             description.style.overflow = 'hidden';
             description.style.transition = 'max-height 0.3s ease-out';
+            item.dataset.collapsed = 'true';
             
             title.addEventListener('click', function() {
-                const isExpanded = description.style.maxHeight !== '0px' && description.style.maxHeight !== '';
+                const isCollapsed = item.dataset.collapsed === 'true';
                 
-                if (isExpanded) {
-                    description.style.maxHeight = '0';
-                } else {
+                if (isCollapsed) {
                     description.style.maxHeight = description.scrollHeight + 'px';
+                    item.dataset.collapsed = 'false';
+                } else {
+                    description.style.maxHeight = '0';
+                    item.dataset.collapsed = 'true';
                 }
             });
+        } else {
+            // On desktop, ensure descriptions are visible
+            description.style.maxHeight = 'none';
+            description.style.overflow = 'visible';
         }
     });
 }
@@ -1348,77 +1381,47 @@ function initPrincipleExpand() {
 // Initialize principle expand on mobile
 initPrincipleExpand();
 
-// Testimonials rotation indicator
-function initTestimonialHighlight() {
-    const testimonials = document.querySelectorAll('.testimonial-simple');
+// Story cards (testimonials) hover highlight
+function initStoryCardHighlight() {
+    const storyCards = document.querySelectorAll('.story-card');
     
-    testimonials.forEach((testimonial, index) => {
-        testimonial.addEventListener('mouseenter', function() {
-            // Dim other testimonials slightly
-            testimonials.forEach((other, otherIndex) => {
+    storyCards.forEach((card, index) => {
+        card.addEventListener('mouseenter', function() {
+            // Dim other cards slightly
+            storyCards.forEach((other, otherIndex) => {
                 if (otherIndex !== index) {
                     other.style.opacity = '0.6';
                 }
             });
         });
         
-        testimonial.addEventListener('mouseleave', function() {
-            // Reset all testimonials
-            testimonials.forEach(other => {
+        card.addEventListener('mouseleave', function() {
+            // Reset all cards
+            storyCards.forEach(other => {
                 other.style.opacity = '1';
             });
         });
     });
 }
 
-// Initialize testimonial highlight
-if (document.querySelector('.testimonials-simple__grid')) {
-    initTestimonialHighlight();
+// Initialize story card highlight
+if (document.querySelector('.client-stories__grid')) {
+    initStoryCardHighlight();
 }
-
-// Logo animation on scroll into view
-function initLogoAnimation() {
-    const logos = document.querySelectorAll('.logos-grid img');
-    
-    if (logos.length === 0) return;
-    
-    const logoObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting && !entry.target.dataset.animated) {
-                entry.target.dataset.animated = 'true';
-                
-                // Stagger the fade-in animation
-                setTimeout(() => {
-                    entry.target.style.opacity = '0.5';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 100);
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
-    
-    logos.forEach(logo => {
-        logo.style.opacity = '0';
-        logo.style.transform = 'translateY(20px)';
-        logo.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
-        logoObserver.observe(logo);
-    });
-}
-
-// Initialize logo animation
-initLogoAnimation();
 
 // Smooth scroll to sections from CTA buttons
 function initCTAScrolling() {
     const ctaButtons = document.querySelectorAll('.mission-statement__cta, .final-cta__button');
     
     ctaButtons.forEach(button => {
-        // Only if button is a scroll link (has # in href)
-        if (button.getAttribute('href') && button.getAttribute('href').startsWith('#')) {
+        // Check if button links to services page (external link)
+        const href = button.getAttribute('href');
+        
+        // Only add scroll behavior for anchor links (internal page sections)
+        if (href && href.startsWith('#')) {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
+                const targetId = href.substring(1);
                 const targetElement = document.getElementById(targetId);
                 
                 if (targetElement) {
@@ -1474,7 +1477,22 @@ window.addEventListener('resize', () => {
     resizeTimer = setTimeout(() => {
         // Reinitialize principle expand for mobile/desktop switch
         if (document.querySelector('.principles-list')) {
-            initPrincipleExpand();
+            // Clear existing event listeners by cloning
+            const principleItems = document.querySelectorAll('.principle-item');
+            principleItems.forEach(item => {
+                const title = item.querySelector('.principle-item__title');
+                const description = item.querySelector('.principle-item__description');
+                
+                if (window.innerWidth > 768) {
+                    // Reset for desktop
+                    description.style.maxHeight = 'none';
+                    description.style.overflow = 'visible';
+                    title.style.cursor = 'default';
+                } else {
+                    // Reinitialize for mobile
+                    initPrincipleExpand();
+                }
+            });
         }
         
         // Reinitialize parallax if needed
@@ -1485,9 +1503,46 @@ window.addEventListener('resize', () => {
             photoItems.forEach(item => {
                 item.style.transform = '';
             });
+        } else if (photoGrid && window.innerWidth > 768) {
+            // Reinitialize parallax on desktop
+            initPhotoParallax();
         }
     }, 250);
 });
+
+// Pillar cards staggered hover effect
+function initPillarCardEffects() {
+    const pillarCards = document.querySelectorAll('.pillar-card');
+    
+    pillarCards.forEach((card, index) => {
+        card.addEventListener('mouseenter', function() {
+            // Add subtle scale to adjacent cards
+            if (pillarCards[index - 1]) {
+                pillarCards[index - 1].style.transform = 'translateY(-2px)';
+            }
+            if (pillarCards[index + 1]) {
+                pillarCards[index + 1].style.transform = 'translateY(-2px)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            // Reset adjacent cards
+            pillarCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.style.transform = '';
+                }
+            });
+        });
+    });
+}
+
+// Initialize pillar card effects
+if (document.querySelector('.service-pillars__grid')) {
+    initPillarCardEffects();
+}
+
+// Console log for debugging
+console.log('About page JavaScript initialized successfully');
 
 
 
