@@ -3914,12 +3914,27 @@ body.scroll-lock {
     gap: var(--space-12);
 }
 
+/* .testimonial-simple__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-border);
+    flex-shrink: 0;
+} */
+
 .testimonial-simple__avatar {
     width: 48px;
     height: 48px;
     border-radius: 50%;
     background-color: var(--color-border);
     flex-shrink: 0;
+    overflow: hidden;
+}
+
+.testimonial-simple__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .testimonial-simple__name {
