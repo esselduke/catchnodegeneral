@@ -1085,60 +1085,410 @@ caseStudySections.forEach(section => {
 
 
 /* ====================================
-   ABOUT PAGE - ADDITIONAL JS
+   NEW ABOUT PAGE - ADDITIONAL JS
    ==================================== */
 
-/* Note: Most about page functionality is handled by global JS.
-   The about page automatically benefits from:
-   - Smooth scrolling
-   - Header navigation
-   - Mobile menu
-   - All global interactions
-   
-   This section adds reveal animations for about-specific elements. */
-
-// Apply reveal animations to about page sections
-const aboutHeroContent = document.querySelector('.about-hero__content');
-if (aboutHeroContent && typeof observer !== 'undefined') {
-    aboutHeroContent.classList.add('reveal');
-    observer.observe(aboutHeroContent);
+// Apply reveal animations to new about page sections
+function initNewAboutPageAnimations() {
+    // Check if we're on the about page
+    const isAboutPage = document.querySelector('.about-new-hero');
+    if (!isAboutPage) return;
+    
+    // Hero content
+    const heroTitle = document.querySelector('.about-new-hero__title');
+    if (heroTitle && typeof observer !== 'undefined') {
+        heroTitle.classList.add('reveal');
+        observer.observe(heroTitle);
+    }
+    
+    const heroSubtitle = document.querySelector('.about-new-hero__subtitle');
+    if (heroSubtitle && typeof observer !== 'undefined') {
+        heroSubtitle.classList.add('reveal');
+        heroSubtitle.style.transitionDelay = '0.1s';
+        observer.observe(heroSubtitle);
+    }
+    
+    // Photo grid items
+    const photoItems = document.querySelectorAll('.photo-grid__item');
+    photoItems.forEach((item, index) => {
+        item.classList.add('reveal');
+        item.style.transitionDelay = `${0.2 + (index * 0.1)}s`;
+        if (typeof observer !== 'undefined') {
+            observer.observe(item);
+        }
+    });
+    
+    // Mission statement
+    const missionContent = document.querySelector('.mission-statement__content');
+    if (missionContent && typeof observer !== 'undefined') {
+        missionContent.classList.add('reveal');
+        observer.observe(missionContent);
+    }
+    
+    // Team members
+    const teamMembers = document.querySelectorAll('.team-member');
+    teamMembers.forEach((member, index) => {
+        member.classList.add('reveal');
+        member.style.transitionDelay = `${index * 0.15}s`;
+        if (typeof observer !== 'undefined') {
+            observer.observe(member);
+        }
+    });
+    
+    // Principle items
+    const principleItems = document.querySelectorAll('.principle-item');
+    principleItems.forEach((item, index) => {
+        item.classList.add('reveal');
+        item.style.transitionDelay = `${index * 0.1}s`;
+        if (typeof observer !== 'undefined') {
+            observer.observe(item);
+        }
+    });
+    
+    // Feature columns
+    const featureColumns = document.querySelectorAll('.feature-column');
+    featureColumns.forEach((column, index) => {
+        column.classList.add('reveal');
+        column.style.transitionDelay = `${index * 0.15}s`;
+        if (typeof observer !== 'undefined') {
+            observer.observe(column);
+        }
+    });
+    
+    // Testimonials
+    const testimonials = document.querySelectorAll('.testimonial-simple');
+    testimonials.forEach((testimonial, index) => {
+        testimonial.classList.add('reveal');
+        testimonial.style.transitionDelay = `${index * 0.15}s`;
+        if (typeof observer !== 'undefined') {
+            observer.observe(testimonial);
+        }
+    });
+    
+    // Final CTA
+    const finalCta = document.querySelector('.final-cta');
+    if (finalCta && typeof observer !== 'undefined') {
+        finalCta.classList.add('reveal');
+        observer.observe(finalCta);
+    }
+    
+    // Logos
+    const logosSection = document.querySelector('.logos-section');
+    if (logosSection && typeof observer !== 'undefined') {
+        logosSection.classList.add('reveal');
+        observer.observe(logosSection);
+    }
 }
 
-const missionCards = document.querySelectorAll('.about-mission__card');
-missionCards.forEach((card, index) => {
-    card.classList.add('reveal');
-    card.style.transitionDelay = `${index * 0.2}s`;
-    if (typeof observer !== 'undefined') {
-        observer.observe(card);
+// Initialize new about page animations
+initNewAboutPageAnimations();
+
+// Photo grid hover effect enhancement
+function initPhotoGridEffects() {
+    const photoItems = document.querySelectorAll('.photo-grid__item');
+    
+    photoItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            // Add subtle scale effect to siblings
+            photoItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.style.opacity = '0.7';
+                }
+            });
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            // Reset all items
+            photoItems.forEach(otherItem => {
+                otherItem.style.opacity = '1';
+            });
+        });
+    });
+}
+
+// Initialize photo grid effects if on about page
+if (document.querySelector('.photo-grid')) {
+    initPhotoGridEffects();
+}
+
+// Smooth number animation for "500+" in final CTA (if needed)
+function animateCTANumber() {
+    const ctaTitle = document.querySelector('.final-cta__title');
+    if (!ctaTitle) return;
+    
+    // Check if title contains "SEO+" or similar number
+    const text = ctaTitle.textContent;
+    const numberMatch = text.match(/(\d+)\+/);
+    
+    if (numberMatch) {
+        const targetNumber = parseInt(numberMatch[1]);
+        const fullText = text;
+        
+        const ctaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !ctaTitle.dataset.animated) {
+                    ctaTitle.dataset.animated = 'true';
+                    
+                    let current = 0;
+                    const increment = targetNumber / 50;
+                    const duration = 1500;
+                    const stepTime = duration / 50;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= targetNumber) {
+                            current = targetNumber;
+                            clearInterval(timer);
+                        }
+                        
+                        // Replace number in text
+                        ctaTitle.textContent = fullText.replace(/\d+\+/, Math.floor(current) + '+');
+                    }, stepTime);
+                    
+                    ctaObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+        
+        ctaObserver.observe(ctaTitle);
     }
+}
+
+// Initialize CTA number animation
+animateCTANumber();
+
+// Parallax effect for photo grid on scroll (optional enhancement)
+function initPhotoParallax() {
+    const photoGrid = document.querySelector('.photo-grid');
+    if (!photoGrid) return;
+    
+    const photoItems = photoGrid.querySelectorAll('.photo-grid__item');
+    
+    const handleScroll = throttle(() => {
+        const scrolled = window.pageYOffset;
+        const photoGridTop = photoGrid.getBoundingClientRect().top + scrolled;
+        const windowHeight = window.innerHeight;
+        
+        if (scrolled + windowHeight > photoGridTop && scrolled < photoGridTop + photoGrid.offsetHeight) {
+            const scrollProgress = (scrolled + windowHeight - photoGridTop) / (photoGrid.offsetHeight + windowHeight);
+            
+            photoItems.forEach((item, index) => {
+                const speed = (index % 2 === 0) ? 20 : -20;
+                const yPos = scrollProgress * speed;
+                item.style.transform = `translateY(${yPos}px)`;
+            });
+        }
+    }, 16);
+    
+    // Only apply parallax on desktop
+    if (window.innerWidth > 768) {
+        window.addEventListener('scroll', handleScroll);
+    }
+}
+
+// Initialize parallax effect
+initPhotoParallax();
+
+// Team member card interaction
+function initTeamMemberInteractions() {
+    const teamMembers = document.querySelectorAll('.team-member');
+    
+    teamMembers.forEach(member => {
+        member.addEventListener('mouseenter', function() {
+            // Add subtle lift effect
+            this.style.transform = 'translateY(-8px)';
+            this.style.transition = 'transform 0.3s ease-out';
+        });
+        
+        member.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+}
+
+// Initialize team member interactions
+if (document.querySelector('.team-grid')) {
+    initTeamMemberInteractions();
+}
+
+// Principle items expand on click (optional interactive feature)
+function initPrincipleExpand() {
+    const principleItems = document.querySelectorAll('.principle-item');
+    
+    principleItems.forEach(item => {
+        const title = item.querySelector('.principle-item__title');
+        const description = item.querySelector('.principle-item__description');
+        
+        if (!title || !description) return;
+        
+        // Make title clickable (mobile enhancement)
+        if (window.innerWidth <= 768) {
+            title.style.cursor = 'pointer';
+            
+            // Initially collapse descriptions on mobile
+            description.style.maxHeight = '0';
+            description.style.overflow = 'hidden';
+            description.style.transition = 'max-height 0.3s ease-out';
+            
+            title.addEventListener('click', function() {
+                const isExpanded = description.style.maxHeight !== '0px' && description.style.maxHeight !== '';
+                
+                if (isExpanded) {
+                    description.style.maxHeight = '0';
+                } else {
+                    description.style.maxHeight = description.scrollHeight + 'px';
+                }
+            });
+        }
+    });
+}
+
+// Initialize principle expand on mobile
+initPrincipleExpand();
+
+// Testimonials rotation indicator
+function initTestimonialHighlight() {
+    const testimonials = document.querySelectorAll('.testimonial-simple');
+    
+    testimonials.forEach((testimonial, index) => {
+        testimonial.addEventListener('mouseenter', function() {
+            // Dim other testimonials slightly
+            testimonials.forEach((other, otherIndex) => {
+                if (otherIndex !== index) {
+                    other.style.opacity = '0.6';
+                }
+            });
+        });
+        
+        testimonial.addEventListener('mouseleave', function() {
+            // Reset all testimonials
+            testimonials.forEach(other => {
+                other.style.opacity = '1';
+            });
+        });
+    });
+}
+
+// Initialize testimonial highlight
+if (document.querySelector('.testimonials-simple__grid')) {
+    initTestimonialHighlight();
+}
+
+// Logo animation on scroll into view
+function initLogoAnimation() {
+    const logos = document.querySelectorAll('.logos-grid img');
+    
+    if (logos.length === 0) return;
+    
+    const logoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting && !entry.target.dataset.animated) {
+                entry.target.dataset.animated = 'true';
+                
+                // Stagger the fade-in animation
+                setTimeout(() => {
+                    entry.target.style.opacity = '0.5';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+    
+    logos.forEach(logo => {
+        logo.style.opacity = '0';
+        logo.style.transform = 'translateY(20px)';
+        logo.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+        logoObserver.observe(logo);
+    });
+}
+
+// Initialize logo animation
+initLogoAnimation();
+
+// Smooth scroll to sections from CTA buttons
+function initCTAScrolling() {
+    const ctaButtons = document.querySelectorAll('.mission-statement__cta, .final-cta__button');
+    
+    ctaButtons.forEach(button => {
+        // Only if button is a scroll link (has # in href)
+        if (button.getAttribute('href') && button.getAttribute('href').startsWith('#')) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+    });
+}
+
+// Initialize CTA scrolling
+initCTAScrolling();
+
+// Performance optimization: Lazy load images in photo grid
+function initLazyLoadPhotoGrid() {
+    const photoImages = document.querySelectorAll('.photo-grid__item img');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        photoImages.forEach(img => {
+            if (img.dataset.src) {
+                imageObserver.observe(img);
+            }
+        });
+    }
+}
+
+// Initialize lazy loading
+initLazyLoadPhotoGrid();
+
+// Add resize handler to recalculate animations on window resize
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        // Reinitialize principle expand for mobile/desktop switch
+        if (document.querySelector('.principles-list')) {
+            initPrincipleExpand();
+        }
+        
+        // Reinitialize parallax if needed
+        const photoGrid = document.querySelector('.photo-grid');
+        if (photoGrid && window.innerWidth <= 768) {
+            // Remove parallax transforms on mobile
+            const photoItems = photoGrid.querySelectorAll('.photo-grid__item');
+            photoItems.forEach(item => {
+                item.style.transform = '';
+            });
+        }
+    }, 250);
 });
 
-const valueCards = document.querySelectorAll('.value-card');
-valueCards.forEach((card, index) => {
-    card.classList.add('reveal');
-    card.style.transitionDelay = `${index * 0.15}s`;
-    if (typeof observer !== 'undefined') {
-        observer.observe(card);
-    }
-});
-
-const timelineItems = document.querySelectorAll('.timeline-item');
-timelineItems.forEach((item, index) => {
-    item.classList.add('reveal');
-    item.style.transitionDelay = `${index * 0.2}s`;
-    if (typeof observer !== 'undefined') {
-        observer.observe(item);
-    }
-});
-
-const leaderCards = document.querySelectorAll('.leader-card');
-leaderCards.forEach((card, index) => {
-    card.classList.add('reveal');
-    card.style.transitionDelay = `${index * 0.2}s`;
-    if (typeof observer !== 'undefined') {
-        observer.observe(card);
-    }
-});
 
 
 /* ====================================
