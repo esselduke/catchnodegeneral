@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Insights on IT automation, cybersecurity best practices, and operational efficiency tips. Learn from the Catchnode team's expertise in business technology.">
-    <meta name="keywords" content="IT blog, automation insights, cybersecurity tips, business technology, IT best practices">
-    
+    <meta name="description" content="Insights on IT automation, cybersecurity best practices, web development, and operational efficiency tips. Learn from the Catchnode team's expertise in business technology and secure web engineering.">
+    <meta name="keywords" content="IT blog, automation insights, cybersecurity tips, business technology, IT best practices, web development, web design, frontend, backend">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -15,7 +15,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Blog – Catchnode">
-    <meta property="og:description" content="Expert insights on IT automation, security, and efficiency for modern businesses.">
+    <meta property="og:description" content="Expert insights on IT automation, security, web development, and efficiency for modern businesses.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://catchnode.com/blog/">
     <meta property="og:image" content="https://catchnode.com/assets/og-blog.jpg">
@@ -23,7 +23,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blog – Catchnode">
-    <meta name="twitter:description" content="Expert insights on IT automation, security, and efficiency.">
+    <meta name="twitter:description" content="Expert insights on IT automation, security, web development, and efficiency.">
     <meta name="twitter:image" content="https://catchnode.com/assets/twitter-blog.jpg">
     
     <title>Blog – IT Insights & Best Practices | Catchnode</title>
@@ -58,6 +58,7 @@
                             <li><a href="/services/helpdesk.html" class="header__dropdown-link">IT & Automation Helpdesk</a></li>
                             <li><a href="/services/automation.html" class="header__dropdown-link">Automation & Efficiency</a></li>
                             <li><a href="/services/cloud.html" class="header__dropdown-link">Cloud & Cybersecurity</a></li>
+                            <li><a href="/services/webdev.html" class="header__dropdown-link">Web Development</a></li>
                         </ul>
                     </li>
                     <li class="header__nav-item">
@@ -102,6 +103,9 @@
                     <a href="/services/cloud.html" class="mobile-menu__link">Cloud & Cybersecurity</a>
                 </li>
                 <li class="mobile-menu__item">
+                    <a href="/services/webdev.html" class="mobile-menu__link">Web Development</a>
+                </li>
+                <li class="mobile-menu__item">
                     <a href="/pricing.html" class="mobile-menu__link">Pricing</a>
                 </li>
                 <li class="mobile-menu__item">
@@ -127,7 +131,7 @@
             <div class="container">
                 <div class="blog-hero__content">
                     <h1 class="blog-hero__title">Insights from the Catchnode team</h1>
-                    <p class="blog-hero__subtitle">Practical tips, best practices, and expert advice on IT automation, cybersecurity, and operational efficiency.</p>
+                    <p class="blog-hero__subtitle">Practical tips, best practices, and expert advice on IT automation, cybersecurity, web development, and operational efficiency.</p>
                 </div>
             </div>
         </section>
@@ -140,6 +144,7 @@
                     <button class="blog-filter__btn" data-filter="automation">Automation</button>
                     <button class="blog-filter__btn" data-filter="security">Security</button>
                     <button class="blog-filter__btn" data-filter="best-practices">Best Practices</button>
+                    <button class="blog-filter__btn" data-filter="webdev">Web Development</button>
                 </div>
             </div>
         </section>
@@ -285,6 +290,29 @@
                             </a>
                         </div>
                     </article>
+
+                    <!-- New Web Development Post -->
+                    <article class="blog-card" data-category="webdev">
+                        <div class="blog-card__image">
+                            <img src="/assets/webdev-stack-illustration.jpg" alt="Modern web development stack" width="400" height="250" loading="lazy">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__category">Web Development</span>
+                                <span class="blog-card__date">October 28, 2024</span>
+                                <span class="blog-card__read-time">7 min read</span>
+                            </div>
+                            <h2 class="blog-card__title">
+                                <a href="/blog/post-webdev-modern-stack.html">Building secure web apps in 2024: the stack we recommend</a>
+                            </h2>
+                            <p class="blog-card__excerpt">An opinionated guide to the frontend, backend, database, and deployment choices Catchnode uses to ship fast, secure, and maintainable web applications for customers.</p>
+                            <a href="/blog/post-webdev-modern-stack.html" class="blog-card__link">Read article
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                                    <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -293,8 +321,8 @@
         <section class="newsletter-cta section section--alt">
             <div class="container">
                 <div class="newsletter-cta__content">
-                    <h2 class="newsletter-cta__title">Get IT insights in your inbox</h2>
-                    <p class="newsletter-cta__subtitle">Join 2,000+ business leaders receiving monthly tips on automation, security, and operational efficiency.</p>
+                    <h2 class="newsletter-cta__title">Get IT & Web development insights in your inbox</h2>
+                    <p class="newsletter-cta__subtitle">Join 2,000+ business leaders receiving monthly tips on automation, security, web development, and operational efficiency.</p>
                     <form class="newsletter-form" id="newsletterForm">
                         <div class="newsletter-form__group">
                             <input type="email" id="newsletter-email" name="email" class="newsletter-form__input" placeholder="Enter your email" required aria-label="Email address">
@@ -318,7 +346,7 @@
                             <img src="/assets/logo.png" alt="Catchnode logo">
                         </a>
                         <p class="footer__tagline">Automate. Secure. Simplify.</p>
-                        <p class="footer__description">Operational IT, intelligent automation, and resilient cloud security for modern teams.</p>
+                        <p class="footer__description">Operational IT, intelligent automation, resilient cloud security, and secure web development for modern teams.</p>
                         <div class="footer__social">
                             <a href="https://linkedin.com/company/catchnode" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -341,6 +369,7 @@
                             <li><a href="/services/helpdesk.html" class="footer__link">IT & Automation Helpdesk</a></li>
                             <li><a href="/services/automation.html" class="footer__link">Automation & Efficiency</a></li>
                             <li><a href="/services/cloud.html" class="footer__link">Cloud & Cybersecurity</a></li>
+                            <li><a href="/services/webdev.html" class="footer__link">Web Development</a></li>
                         </ul>
                     </div>
                     

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/TemplateGallery.module.css" />
+    <link rel="stylesheet" href="css/TemplateCard.module.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="title">
+          Website templates for designers, businesses, and personal use
+        </h1>
+        <p class="subtitle">
+          Create beautiful websites with our curated collection of stunning
+          Website Templates.
+        </p>
+
+        <div class="searchContainer">
+          <i class="fas fa-search searchIcon"></i>
+          <input
+            type="text"
+            placeholder="Search all templates (e.g. Business, Portfolio)"
+            class="searchInput"
+          />
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">Popular categories</h2>
+          <a href="/templates/categories" class="browseAll">
+            Browse all categories <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="categoriesGrid" id="categoriesGrid">
+          <!-- Categories will be populated by JavaScript -->
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">Featured</h2>
+          <a href="/templates/all" class="browseAll">
+            Browse all featured website templates
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <p class="sectionSubtitle">Monthly selection of curated templates</p>
+
+        <div class="templatesGrid" id="featuredTemplates">
+          <!-- Featured templates will be populated by JavaScript -->
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">New</h2>
+          <a href="/templates/all" class="browseAll">
+            Browse all new website templates <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <p class="sectionSubtitle">
+          Recently updated from our expert template creators
+        </p>
+
+        <div class="templatesGrid" id="newTemplates">
+          <!-- New templates will be populated by JavaScript -->
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sectionHeader">
+          <h2 class="sectionTitle">Free</h2>
+          <a href="/templates/all" class="browseAll">
+            Browse all free website templates <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <p class="sectionSubtitle">Free templates to get started</p>
+
+        <div class="templatesGrid" id="freeTemplates">
+          <!-- Free templates will be populated by JavaScript -->
+        </div>
+      </section>
+    </div>
+
+    <script src="js/template.js"></script>
+  </body>
+</html>
