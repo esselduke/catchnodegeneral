@@ -182,7 +182,7 @@ templateCards.forEach(card => {
 const browseTemplateBtn = document.querySelector('.btn-outline');
 if (browseTemplateBtn) {
     browseTemplateBtn.addEventListener('click', () => {
-        window.location.href = "/template.html";
+        window.location.href = "template.html";
     });
 }
 
