@@ -2207,75 +2207,6 @@ body.scroll-lock {
     }
 }
 
-
-/* ====================================
-   AUTOMATION PAGE - ADDITIONAL STYLES
-   ==================================== */
-
-/* Note: Most styles for service subpages were added in Step 8 (helpdesk.html CSS)
-   and are already applied globally. This section is for any automation-specific
-   styling if needed in the future. */
-
-/* Currently, the automation page uses the same components as the helpdesk page:
-   - .service-hero
-   - .pso-card
-   - .feature-card
-   - .example-card
-   - .metric-card
-   - .testimonial-feature
-   - .pricing-teaser
-   
-   No additional CSS needed at this time. All styling is inherited from global.css */
-
-/* Optional: Automation-specific color accents (if you want to differentiate) */
-/*
-.service-hero--automation {
-    background: linear-gradient(135deg, #F0F9FF 0%, var(--color-white) 100%);
-}
-
-.pso-card--automation.pso-card--highlight {
-    background: linear-gradient(135deg, #DBEAFE 0%, var(--color-white) 100%);
-}
-*/
-
-/* All existing service subpage styles from Step 8 apply here */
-
-
-/* ====================================
-   CLOUD & CYBERSECURITY PAGE - ADDITIONAL STYLES
-   ==================================== */
-
-/* Note: All service subpage styles were created in Step 8 and apply globally.
-   The cloud & cybersecurity page uses the same components as helpdesk and automation pages:
-   - .service-hero
-   - .pso-card
-   - .feature-card
-   - .example-card
-   - .metric-card
-   - .testimonial-feature
-   - .pricing-teaser
-   
-   No additional CSS needed. All styling is inherited from global.css */
-
-/* Optional: Cloud-specific color accents (if you want visual differentiation) */
-/*
-.service-hero--cloud {
-    background: linear-gradient(135deg, #F0FDF4 0%, var(--color-white) 100%);
-}
-
-.pso-card--cloud.pso-card--highlight {
-    background: linear-gradient(135deg, #DCFCE7 0%, var(--color-white) 100%);
-    border-color: var(--color-accent-green);
-}
-
-.pso-card--cloud.pso-card--highlight .pso-card__label {
-    background-color: var(--color-accent-green);
-}
-*/
-
-/* All existing service subpage styles from Step 8 apply here */
-
-
 /* ====================================
    PRICING PAGE STYLES
    ==================================== */
@@ -2608,9 +2539,6 @@ body.scroll-lock {
 .pricing-comparison {
     padding: var(--space-64) 0;
 }
-
-/* Reuse comparison table styles from services page */
-/* Already defined in global.css from Step 5 */
 
 /* Pricing FAQ */
 .pricing-faq {
